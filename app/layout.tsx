@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/config/site";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -18,13 +19,7 @@ export const metadata: Metadata = {
       template: `%s | ${siteConfig.name}`,
     },
     description: siteConfig.description,
-    keywords: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "Server Components",
-      "Radix UI",
-    ],
+    keywords: ["Rob Fraser", "Web Development", "Software Development"],
     authors: [
       {
         name: "Rob Fraser",
@@ -57,7 +52,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-        {children}
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
