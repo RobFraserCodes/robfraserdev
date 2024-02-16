@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation"
 import { allAuthors, allPosts } from "contentlayer/generated"
 
-import { Mdx } from "@/components/mdx-components"
-
 import "@/styles/mdx.css"
 import { Metadata } from "next"
 import Image from "next/image"
@@ -157,7 +155,6 @@ export default async function PostPage({ params }: PostPageProps) {
             priority
             />
         )}
-        <Mdx code={post.body.code} />
         <hr className="mt-12" />
         <div className="flex justify-center py-6 lg:py-10">
             <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>
