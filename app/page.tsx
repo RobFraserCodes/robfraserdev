@@ -1,6 +1,7 @@
 import BlogPreview from "@/components/blog-preview";
 import Features from "@/components/features";
 import Hero from "@/components/hero";
+import ContactSection from "@/components/contact";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Features />
       <BlogPreview />
+      <ContactSection />
     </main>
   );
 }
