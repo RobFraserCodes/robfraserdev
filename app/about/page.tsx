@@ -1,10 +1,3 @@
-'use client'
-
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { navigation } from '@/config/site'
-import Header from '@/components/header'
 import BlogPreview from '@/components/blog-preview'
 
 const stats = [
@@ -44,7 +37,6 @@ const values = [
       'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
   },
 ]
-
 
 export default function AboutPage() {
 
