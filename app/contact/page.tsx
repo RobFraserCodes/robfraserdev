@@ -1,5 +1,7 @@
+
 export default function ContactPage() {
-    return (
+
+  return (
       <div className="relative bg-background">
         <div className="lg:absolute lg:inset-0 lg:left-1/2">
           <img

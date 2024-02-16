@@ -20,3 +20,19 @@ export const navigation = [
   { title: "Contact", href: "/contact" },
 ]
 
+export const socialLinks = {
+  social: [
+    {
+      name: 'Instagram',
+      href: '#',
+    },
+    {
+      name: 'X',
+      href: '#',
+    },
+    {
+      name: 'GitHub',
+      href: '#'
+    },
+  ],
+}

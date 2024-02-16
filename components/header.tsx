@@ -7,12 +7,17 @@ import { navigation } from '@/config/site';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button, buttonVariants } from './ui/button';
+import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const textColorClass = pathname === "/services" ? "text-white" : "text-foreground";
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
+        
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
@@ -36,7 +41,10 @@ export default function Header() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <Link key={item.title} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <Link key={item.title} href={item.href} 
+                className={cn("text-sm font-semibold leading-6", 
+                  textColorClass === "text-white" ? "text-white" : "text-foreground"
+                )}>
                 {item.title}
               </Link>
             ))}
@@ -77,8 +85,9 @@ export default function Header() {
                     <Link
                       key={item.title}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
+                      className={cn("text-sm font-semibold leading-6", 
+                      textColorClass === "text-white" ? "text-white" : "text-foreground"
+                    )}>                   
                       {item.title}
                     </Link>
                   ))}
@@ -86,7 +95,7 @@ export default function Header() {
                 <div className="py-6">
                   <Link
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-foreground hover:bg-gray-50"
                   >
                     Log in
                   </Link>
