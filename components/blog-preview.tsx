@@ -8,13 +8,19 @@ export default function BlogPreview() {
       return compareDesc(new Date(a.date), new Date(b.date))
     })
     .slice(0, 3)
+    
+  const author = posts.map((post) => {
+    return post.authors.map((author) => ({
+      name: author,
+    }))
+  })
 
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">From the blog</h2>
+          <p className="mt-2 text-lg leading-8 text-muted-foreground">
             Learn how to grow your business with our expert advice.
           </p>
         </div>
@@ -30,13 +36,20 @@ export default function BlogPreview() {
 
               <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
                 <time dateTime={post.date} className="mr-8">
-                  {post.date}
+                  {new Date(post.date).toLocaleDateString('en-GB', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                  })}
                 </time>
                 <div className="-ml-4 flex items-center gap-x-4">
                   <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
                     <circle cx={1} cy={1} r={1} />
                   </svg>
                 </div>
+                {post.authors.map((author) => (
+                    <span className="ml-4">{author}</span>
+                ))}
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
                 <a href={post.slug}>
