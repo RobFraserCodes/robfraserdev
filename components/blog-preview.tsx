@@ -48,7 +48,9 @@ export default function BlogPreview() {
                   </svg>
                 </div>
                 {post.authors.map((author) => (
+                  <div key={author}>
                     <span className="ml-4">{author}</span>
+                  </div>
                 ))}
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
