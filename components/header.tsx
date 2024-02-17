@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { Button, buttonVariants } from './ui/button';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
+import { ThemeSwitch } from './theme-switch-button';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -50,6 +51,7 @@ export default function Header() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <ThemeSwitch />
             <Link
                 href="#" 
                 className={buttonVariants({ variant: "ghost" })}>
