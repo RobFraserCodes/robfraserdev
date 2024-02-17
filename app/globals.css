@@ -89,6 +89,6 @@
     @apply text-lg font-bold tracking-tight text-foreground sm:text-2xl;
   }
   p {
-    @apply text-lg text-muted-foreground mt-6 leading-8 sm:max-w-md lg:max-w-none;
+    @apply text-lg text-muted-foreground mt-4 leading-8 sm:max-w-md lg:max-w-none;
   }
 }

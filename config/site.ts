@@ -1,14 +1,16 @@
 import { SiteConfig, NavItem } from "@/types"
+import { TwitterLogoIcon } from "@radix-ui/react-icons"
+import { Icons } from "@/components/icons"
 
 export const siteConfig: SiteConfig = {
   name: "Rob Fraser Dev",
   description:
     "An open source application built using the new router, server components and everything new in Next.js 13.",
-  url: "https://tx.shadcn.com",
+  url: "https://www.robfraser.dev",
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/taxonomy",
+    twitter: "https://twitter.com/robfrasercodes",
+    github: "https://github.com/robfrasercodes",
   },
 }
 
@@ -24,15 +26,19 @@ export const socialLinks = {
   social: [
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://www.instagram.com/robfraserdev/',
+      icon: Icons.instagram,
     },
     {
       name: 'X',
-      href: '#',
+      href: 'https://twitter.com/robfrasercodes',
+      icon: Icons.twitter,
+
     },
     {
       name: 'GitHub',
-      href: '#'
+      href: 'https://github.com/RobFraserCodes/',
+      icon: Icons.gitHub,
     },
   ],
 }
