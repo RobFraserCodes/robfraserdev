@@ -1,5 +1,6 @@
 import { allPosts } from "@/.contentlayer/generated"
 import { compareDesc } from "date-fns"
+import Link from "next/link"
 
 export default function BlogPreview() {
   const posts = allPosts
@@ -54,10 +55,10 @@ export default function BlogPreview() {
                 ))}
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                <a href={post.slug}>
+                <Link href={post.slug}>
                   <span className="absolute inset-0" />
                   {post.title}
-                </a>
+                </Link>
               </h3>
             </article>
           ))}
