@@ -5,11 +5,11 @@ import Image from "next/image"
 import { cn } from "@/lib/utils";
 
 const rotationOptions = [
-    { className: "rotate-1", degrees: -20 },
-    { className: "rotate-2", degrees: -10 },
+    { className: "rotate-1", degrees: -30 },
+    { className: "rotate-2", degrees: -15 },
     { className: "rotate-3", degrees: 0 },
-    { className: "rotate-4", degrees: 10 },
-    { className: "rotate-5", degrees: 20 },
+    { className: "rotate-4", degrees: 15 },
+    { className: "rotate-5", degrees: 30 },
   ];
   
 
