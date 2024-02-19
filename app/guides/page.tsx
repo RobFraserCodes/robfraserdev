@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { allGuides } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 import { formatDate } from "@/lib/utils"
@@ -30,8 +31,15 @@ export default function PortfolioPage() {
                   Featured
                 </span>
               )}
-              <div className="flex flex-col justify-between space-y-4">
+              <div className="flex flex-col items-center space-y-4">
                 <div className="space-y-2">
+                  <Image
+                    src={guide.image}
+                    alt={guide.title}
+                    width={500}
+                    height={500}
+                    className="rounded-lg"
+                  />
                   <h2 className="text-xl font-medium tracking-tight">
                     {guide.title}
                   </h2>

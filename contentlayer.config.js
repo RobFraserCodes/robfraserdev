@@ -52,6 +52,10 @@ export const Guide = defineDocumentType(() => ({
       type: "date",
       required: true,
     },
+    image: {
+      type: "string",
+      required: true,
+    },
     published: {
       type: "boolean",
       default: true,

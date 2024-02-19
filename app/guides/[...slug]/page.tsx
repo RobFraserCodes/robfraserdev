@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allGuides } from "contentlayer/generated"
-
+import Image from "next/image"
 // import { getTableOfContents } from "@/lib/toc"
 import { Icons } from "@/components/icons"
 import { Mdx } from "@/components/mdx-components"
@@ -90,7 +90,16 @@ export default async function GuidePage({ params }: GuidePageProps) {
   }
 
   return (
-    <main className="container max-w-7xl relative py-6 lg:grid lg:gap-10 lg:py-10 xl:gap-20">
+    <main className="container max-w-7xl relative py-32">
+      <div className="w-full relative h-[500px]">
+        <Image
+          src={guide.image}
+          alt={guide.title}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg"
+        />
+      </div>
       <div>
         <Mdx code={guide.body.code} />
         <hr className="my-4" />

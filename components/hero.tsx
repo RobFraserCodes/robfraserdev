@@ -62,7 +62,7 @@ export default function Hero() {
                     <Link
                       href="/get-started"
                       className={buttonVariants({ variant: "ghost" })}>
-                        Click Here <span aria-hidden="true">→</span>
+                        Click Here&nbsp;<span aria-hidden="true">→</span>
                     </Link>
                   </div>
                 </div>

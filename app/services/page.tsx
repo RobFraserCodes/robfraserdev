@@ -61,7 +61,7 @@ export default function ServicesPage() {
                   >
                     Contact Us
                   </Link>
-                  <Link href="/portfolio">
+                  <Link href="/guides">
                     View My Portfolio <span aria-hidden="true">→</span>
                   </Link>
                 </div>
