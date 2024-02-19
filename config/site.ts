@@ -1,5 +1,4 @@
 import { SiteConfig, NavItem } from "@/types"
-import { TwitterLogoIcon } from "@radix-ui/react-icons"
 import { Icons } from "@/components/icons"
 
 export const siteConfig: SiteConfig = {
@@ -19,6 +18,7 @@ export const navigation = [
   { title: "About", href: "/about" },
   { title: "Blog", href: "/blog" },
   { title: "Services", href: "/services" },
+  { title: "Work", href: "/guides" },
   { title: "Contact", href: "/contact" },
 ]
 
@@ -40,5 +40,10 @@ export const socialLinks = {
       href: 'https://github.com/RobFraserCodes/',
       icon: Icons.gitHub,
     },
+    {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/robfrasercodes/',
+      icon: Icons.linkedIn,
+    }
   ],
 }

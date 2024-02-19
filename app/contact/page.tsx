@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ContactPage() {
 
   return (
-      <div className="relative bg-background mt-28">
+      <div className="relative bg-background">
         <div className="lg:absolute lg:inset-0 lg:left-1/2">
           <Image
             className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
@@ -16,8 +16,8 @@ export default function ContactPage() {
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
           <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let&apos;s work together</h2>
-              <p className="mt-2 text-lg leading-8 text-gray-600">
+              <h2>Let&apos;s work together</h2>
+              <p>
                 Proin volutpat consequat porttitor cras nullam gravida at orci molestie a eu arcu sed ut tincidunt magna.
               </p>
               <form action="#" method="POST" className="mt-16">

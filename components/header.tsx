@@ -18,7 +18,6 @@ export default function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-        
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
@@ -59,53 +58,54 @@ export default function Header() {
             </Link>
           </div>
         </nav>
-        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-          <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Rob Fraser Dev</span>
-                <Image
-                    width={64}
-                    height={64}
-                    src="/logo.svg"
-                    alt="Rob Fraser Dev logo"
-                />
-              </Link>
-              <Button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </Button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      className={cn("text-sm font-semibold leading-6", 
-                      textColorClass === "text-white" ? "text-white" : "text-foreground"
-                    )}>                   
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <Link
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-foreground hover:bg-gray-50"
-                  >
-                    Log in
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </Dialog.Panel>
-        </Dialog>
+
+<Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+  <div className="fixed inset-0 z-50" />
+  <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+    <div className="flex items-center justify-between">
+      <Link href="/" className="-m-1.5 p-1.5">
+        <span className="sr-only">Rob Fraser Dev</span>
+        <Image
+            width={64}
+            height={64}
+            src="/logo.svg"
+            alt="Rob Fraser Dev logo"
+        />
+      </Link>
+      <Button
+        type="button"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        <span className="sr-only">Close menu</span>
+        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+      </Button>
+    </div>
+    <div className="mt-6">
+      <ul className="divide-y divide-foreground/5">
+        {navigation.map((item) => (
+          <li key={item.title} className="py-2">
+            <Link
+              href={item.href}
+              className={cn("text-sm font-semibold leading-6 block", 
+              textColorClass === "text-white" ? "text-white" : "text-foreground"
+            )}>
+              {item.title}
+            </Link>
+          </li>
+        ))}
+        <li className="py-2">
+          <Link
+            href="#"
+            className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-foreground hover:bg-gray-50"
+          >
+            Log in
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </Dialog.Panel>
+</Dialog>
+
       </header>
   )
 }
