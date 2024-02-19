@@ -33,7 +33,7 @@ export default function PortfolioPreview() {
                 <Link href={item.slug} key={item._id}>
                     <article
                         className={cn(
-                        "relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 pb-8 pt-80 sm:pt-48 lg:pt-80 px-40 object-cover group-hover:scale-110 transition-transform duration-300 ease-in-out",
+                        "my-24 relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 pb-8 pt-80 sm:pt-48 lg:pt-80 px-40 object-cover group-hover:scale-110 transition-transform duration-300 ease-in-out",
                         rotationClass
                         )}
                     >

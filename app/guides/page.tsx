@@ -24,7 +24,7 @@ export default function PortfolioPage() {
           {guides.map((guide) => (
             <article
               key={guide._id}
-              className="group relative rounded-lg border p-6 shadow-md transition-shadow hover:shadow-lg"
+              className="py-16 group relative rounded-lg border p-6 shadow-md transition-shadow hover:shadow-lg"
             >
               {guide.featured && (
                 <span className="absolute right-4 top-4 rounded-full px-3 py-1 text-xs font-medium">

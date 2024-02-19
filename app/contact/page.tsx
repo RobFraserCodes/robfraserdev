@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ContactPage() {
 
   return (
-      <div className="relative bg-background">
+      <main className="relative bg-background">
         <div className="lg:absolute lg:inset-0 lg:left-1/2">
           <Image
             className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
@@ -176,7 +176,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     )
   }
   
