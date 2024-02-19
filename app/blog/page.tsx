@@ -15,7 +15,7 @@ export default function BlogPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
             <h2>From the blog</h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
+            <p className="mt-2 text-lg leading-8 text-muted-foreground">
                 Learn how to grow your business with our expert advice.
             </p>
             </div>

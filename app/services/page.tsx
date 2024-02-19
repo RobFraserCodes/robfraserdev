@@ -4,6 +4,9 @@ import { tiers } from 'content/data/tiers'
 import ContactSection from '@/components/contact'
 import { cn } from '@/lib/utils'
 import FAQSection from '@/components/faq-section'
+import Image from 'next/image'
+import Link from 'next/link'
+import { buttonVariants } from '@/components/ui/button'
 
 
 export default function ServicesPage() {
@@ -13,11 +16,13 @@ export default function ServicesPage() {
 
       <main>
         {/* Hero section */}
-        <div className="relative isolate overflow-hidden bg-gray-900 pb-16 pt-14 sm:pb-20">
-          <img
+        <div className="relative isolate overflow-hidden bg-primary pb-16 pt-14 sm:pb-20">
+          <Image
             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
             alt=""
             className="absolute inset-0 -z-10 h-full w-full object-cover"
+            width={2830}
+            height={1886}
           />
           <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -51,50 +56,49 @@ export default function ServicesPage() {
                   amet fugiat veniam occaecat fugiat aliqua.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
-                  <a
-                    href="#"
-                    className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                  <Link href="/contact"
+                    className={buttonVariants({ variant: "default"})}
                   >
-                    Get started
-                  </a>
-                  <a href="#" className="text-sm font-semibold leading-6 text-white">
-                    Live demo <span aria-hidden="true">→</span>
-                  </a>
+                    Contact Us
+                  </Link>
+                  <Link href="/portfolio">
+                    View My Portfolio <span aria-hidden="true">→</span>
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* Logo cloud */}
             <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-              <img
+              <Image
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/transistor-logo-white.svg"
+                src="https://tailwindui.com/Image/logos/158x48/transistor-logo-white.svg"
                 alt="Transistor"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/reform-logo-white.svg"
+                src="https://tailwindui.com/Image/logos/158x48/reform-logo-white.svg"
                 alt="Reform"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg"
+                src="https://tailwindui.com/Image/logos/158x48/tuple-logo-white.svg"
                 alt="Tuple"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-                src="https://tailwindui.com/img/logos/158x48/savvycal-logo-white.svg"
+                src="https://tailwindui.com/Image/logos/158x48/savvycal-logo-white.svg"
                 alt="SavvyCal"
                 width={158}
                 height={48}
               />
-              <img
+              <Image
                 className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
                 src="https://tailwindui.com/img/logos/158x48/statamic-logo-white.svg"
                 alt="Statamic"
@@ -121,9 +125,9 @@ export default function ServicesPage() {
         <div className="mt-32 sm:mt-56">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
-              <h2 className="text-base font-semibold leading-7 text-indigo-600">Everything you need</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">No server? No problem.</p>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <h2 className="text-base font-semibold leading-7 text-primary">Everything you need</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">No server? No problem.</p>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
                 iste dolor cupiditate blanditiis.
               </p>
@@ -131,7 +135,7 @@ export default function ServicesPage() {
           </div>
           <div className="relative overflow-hidden pt-16">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <img
+              <Image
                 src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
                 alt="App screenshot"
                 className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
@@ -139,16 +143,16 @@ export default function ServicesPage() {
                 height={1442}
               />
               <div className="relative" aria-hidden="true">
-                <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
+                <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-background pt-[7%]" />
               </div>
             </div>
           </div>
           <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-            <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+            <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-muted-foreground sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
-                    <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
+                  <dt className="inline font-semibold text-foreground">
+                    <feature.icon className="absolute left-1 top-1 h-5 w-5 text-primary" aria-hidden="true" />
                     {feature.name}
                   </dt>{' '}
                   <dd className="inline">{feature.description}</dd>
@@ -159,7 +163,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Testimonial section */}
-        <div className="relative z-10 mt-32 bg-gray-900 pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
+        <div className="relative z-10 mt-32 bg-background pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
           <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
             <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
               <div
@@ -174,10 +178,12 @@ export default function ServicesPage() {
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
             <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
               <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                <img
+                <Image
                   className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
                   src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
                   alt=""
+                  width={2102}
+                  height={1051}
                 />
               </div>
             </div>
@@ -195,7 +201,7 @@ export default function ServicesPage() {
                   />
                   <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                 </svg>
-                <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                <blockquote className="text-xl font-semibold leading-8 text-foreground sm:text-2xl sm:leading-9">
                   <p>
                     Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit
                     tincidunt nunc. Et non lorem tortor posuere. Nunc eu scelerisque interdum eget tellus non nibh
@@ -203,8 +209,8 @@ export default function ServicesPage() {
                   </p>
                 </blockquote>
                 <figcaption className="mt-8 text-base">
-                  <div className="font-semibold text-white">Judith Black</div>
-                  <div className="mt-1 text-gray-400">CEO of Tuple</div>
+                  <div className="font-semibold text-foreground">Judith Black</div>
+                  <div className="mt-1 text-muted-foreground">CEO of Tuple</div>
                 </figcaption>
               </figure>
             </div>
@@ -212,7 +218,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Pricing section */}
-        <div className="relative isolate mt-32 bg-white px-6 sm:mt-56 lg:px-8">
+        <div className="relative isolate mt-32 bg-background px-6 sm:mt-56 lg:px-8">
           <div
             className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
             aria-hidden="true"
@@ -226,12 +232,12 @@ export default function ServicesPage() {
             />
           </div>
           <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-            <h2 className="text-base font-semibold leading-7 text-indigo-600">Pricing</h2>
-            <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            <h2 className="text-base font-semibold leading-7 text-primary">Pricing</h2>
+            <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               The right price for you, whoever you are
             </p>
           </div>
-          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-lg">
             Qui iusto aut est earum eos quae. Eligendi est at nam aliquid ad quo reprehenderit in aliquid fugiat dolorum
             voluptatibus.
           </p>
@@ -240,7 +246,7 @@ export default function ServicesPage() {
               <div
                 key={tier.id}
                 className={cn(
-                  tier.featured ? 'relative bg-gray-900 shadow-2xl' : 'bg-white/60 sm:mx-8 lg:mx-0',
+                  tier.featured ? 'relative bg-gray-900 shadow-2xl' : 'bg-background/60 sm:mx-8 lg:mx-0',
                   tier.featured
                     ? ''
                     : tierIdx === 0
@@ -252,7 +258,7 @@ export default function ServicesPage() {
                 <h3
                   id={tier.id}
                   className={cn(
-                    tier.featured ? 'text-indigo-400' : 'text-indigo-600',
+                    tier.featured ? 'text-primary/60' : 'text-primary',
                     'text-base font-semibold leading-7'
                   )}
                 >
@@ -261,7 +267,7 @@ export default function ServicesPage() {
                 <p className="mt-4 flex items-baseline gap-x-2">
                   <span
                     className={cn(
-                      tier.featured ? 'text-white' : 'text-gray-900',
+                      tier.featured ? 'text-primary-foreground' : 'text-foreground',
                       'text-5xl font-bold tracking-tight'
                     )}
                   >
@@ -272,7 +278,7 @@ export default function ServicesPage() {
                   </span>
                 </p>
                 <p
-                  className={cn(tier.featured ? 'text-gray-300' : 'text-gray-600', 'mt-6 text-base leading-7')}
+                  className={cn(tier.featured ? 'text-foreground' : 'text-gray-600', 'mt-6 text-base leading-7')}
                 >
                   {tier.description}
                 </p>
