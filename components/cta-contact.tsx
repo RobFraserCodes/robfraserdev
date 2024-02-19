@@ -1,8 +1,4 @@
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
-import { Label } from "./ui/label"
-import { Textarea } from "./ui/textarea"
-import Link from "next/link"
+import ContactForm from "./contact-form"
 
 export default function ContactSection() {
     return (
@@ -37,76 +33,8 @@ export default function ContactSection() {
             We help companies and individuals build out their brand guidelines.
           </p>
           <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
-            <form action="#" method="POST" className="lg:flex-auto">
-              <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                <div>
-                  <Label htmlFor="first-name">First name</Label>
-                  <div className="mt-2.5">
-                    <Input
-                      type="text"
-                      name="first-name"
-                      id="first-name"
-                      autoComplete="given-name"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="last-name">Last name</Label>
-                  <div className="mt-2.5">
-                    <Input
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      autoComplete="family-name"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <div className="mt-2.5">
-                    <Input
-                      type="email"
-                      name="email"
-                      id="email"
-                      autoComplete="email"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="phone">Phone</Label>
-                  <div className="mt-2.5">
-                    <Input
-                      type="tel"
-                      name="phone"
-                      id="phone"
-                      autoComplete="tel"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <Label htmlFor="message">Message</Label>
-                  <div className="mt-2.5">
-                    <Textarea
-                      name="message"
-                      id="message"
-                      placeholder="Type your message here."
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="mt-10">
-                <Button type="submit" 
-                  className="w-full"  
-                >
-                  Let&apos;s talk
-                </Button>
-              </div>
-              <p className="text-sm">By submitting this form, I agree to the{' '}
-                <Link href="/privacy-policy" className="font-semibold text-primary">
-                  privacy&nbsp;policy
-                </Link>.
-              </p>
-            </form>
+            {/* Contact form */}
+            <ContactForm />
 
             {/* Testimonial */}
             <div className="lg:mt-6 lg:w-80 lg:flex-none">
