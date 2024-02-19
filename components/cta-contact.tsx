@@ -1,4 +1,5 @@
 import ContactForm from "./contact-form"
+import Image from "next/image"
 
 export default function ContactSection() {
     return (
@@ -38,7 +39,13 @@ export default function ContactSection() {
 
             {/* Testimonial */}
             <div className="lg:mt-6 lg:w-80 lg:flex-none">
-              <img className="h-12 w-auto" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="" />
+              <Image 
+                className="h-12 w-auto" 
+                src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" 
+                alt=""
+                width={200}
+                height={50} 
+              />
               <figure className="mt-10">
                 <blockquote className="text-lg font-semibold leading-8 text-muted-foreground">
                   <p>
@@ -47,10 +54,12 @@ export default function ContactSection() {
                   </p>
                 </blockquote>
                 <figcaption className="mt-10 flex gap-x-6">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
                     alt=""
                     className="h-12 w-12 flex-none rounded-full bg-gray-50"
+                    width={96}
+                    height={96}
                   />
                   <div>
                     <div className="text-base font-semibold text-foreground">Brenna Goyette</div>

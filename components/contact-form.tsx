@@ -140,7 +140,7 @@ export default function ContactForm() {
                     className='w-full'
                     type="submit"
                 >
-                    Let's talk
+                    Let&apos;s talk
                 </Button>
             </div>
             <p className="text-sm">By submitting this form, I agree to the{' '}
