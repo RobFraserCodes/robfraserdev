@@ -7,9 +7,8 @@ import { cn } from "@/lib/utils";
 const rotationOptions = [
     { className: "rotate-1", degrees: -30 },
     { className: "rotate-2", degrees: -15 },
-    { className: "rotate-3", degrees: 0 },
-    { className: "rotate-4", degrees: 15 },
-    { className: "rotate-5", degrees: 30 },
+    { className: "rotate-3", degrees: 15 },
+    { className: "rotate-4", degrees: 30 },
   ];
   
 
@@ -31,25 +30,27 @@ export default function PortfolioPreview() {
             const { className: rotationClass } = getRandomRotation();
             
             return (
-              <article
-                key={item._id}
-                className={cn(
-                  "relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 pb-8 pt-80 sm:pt-48 lg:pt-80 px-40",
-                  rotationClass
-                )}
-              >
-                <Link href={item.slug}>
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    className="absolute inset-0 -z-10 h-full w-full object-cover"
-                    width={500}
-                    height={500}
-                  />
-                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
-                <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+                <Link href={item.slug} key={item._id}>
+                    <article
+                        className={cn(
+                        "relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 pb-8 pt-80 sm:pt-48 lg:pt-80 px-40 object-cover group-hover:scale-110 transition-transform duration-300 ease-in-out",
+                        rotationClass
+                        )}
+                    >
+                        <Image
+                            src={item.image}
+                            alt={item.title}
+                            className="absolute inset-0 -z-10 h-full w-full object-cover"
+                            width={500}
+                            height={500}
+                        />
+                        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-primary via-primary/40" />
+                        <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-primary/10" />
+                        <div className="absolute inset-0 flex items-end justify-center p-4 opacity-0 hover:opacity-100">
+                            <span className="text-white text-xl">{item.title}</span>
+                        </div>
+                    </article>
                 </Link>
-              </article>
             );
           })}
         </div>
