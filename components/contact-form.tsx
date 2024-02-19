@@ -18,7 +18,6 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
-// This is a form component that uses the zod library to validate the form data.
 const formSchema = z.object({
     firstName: z.string().min(2),
     lastName: z.string().min(2),
