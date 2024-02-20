@@ -48,22 +48,20 @@ export default function Hero() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1>We&apos;re changing the way people connect.</h1>
+                  <h1>Empower Your Digital Presence Through Design</h1>
                   <p>
-                    Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et
-                    labore commodo nulla aliqua proident mollit ullamco exercitation tempor. Sint aliqua anim nulla sunt
-                    mollit id pariatur in voluptate cillum.
+                    Welcome to Rob Fraser Dev, where I transform your vision into engaging mobile experiences that captivate your audience. With a passion for design and innovation, we're not just developing apps; we're crafting the future of mobile interaction. Let's turn your ideas into reality and make your app the next big thing. Start your journey with us today!
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link
-                      href="/get-started"
+                      href="/guides"
                       className={buttonVariants({ variant: "default" })}>
-                        Get Started
+                        My Work
                     </Link>
                     <Link
-                      href="/get-started"
+                      href="/contact"
                       className={buttonVariants({ variant: "ghost" })}>
-                        Click Here&nbsp;<span aria-hidden="true">→</span>
+                        Contact Me&nbsp;<span aria-hidden="true">→</span>
                     </Link>
                   </div>
                 </div>

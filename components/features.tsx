@@ -1,4 +1,3 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 import { features } from '@/content/data/features'
 
 export default function Features() {
@@ -6,11 +5,11 @@ export default function Features() {
     <div className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base text-primary">Deploy faster</h2>
-          <h3>Everything you need to deploy your app</h3>
+          <h2 className="text-base text-primary">Why Choose Rob Fraser?</h2>
+          <h3>Unleashing the Power of Exceptional App Design</h3>
           <p>
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+            Our team of expert designers and developers are dedicated to creating the best user experience for your
+            app. We are committed to providing the highest quality of service and support to our clients.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

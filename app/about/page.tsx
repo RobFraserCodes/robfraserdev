@@ -1,43 +1,6 @@
 import BlogPreview from '@/components/blog-preview'
 import Image from 'next/image'
-
-const stats = [
-  { label: 'Transactions every 24 hours', value: '44 million' },
-  { label: 'Assets under holding', value: '$119 trillion' },
-  { label: 'New users annually', value: '46,000' },
-]
-const values = [
-  {
-    name: 'Be world-class',
-    description:
-      'Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.',
-  },
-  {
-    name: 'Share everything you know',
-    description:
-      'Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.',
-  },
-  {
-    name: 'Always learning',
-    description:
-      'Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.',
-  },
-  {
-    name: 'Be supportive',
-    description:
-      'Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.',
-  },
-  {
-    name: 'Take responsibility',
-    description:
-      'Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.',
-  },
-  {
-    name: 'Enjoy downtime',
-    description:
-      'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
-  },
-]
+import { stats, values } from '@/content/data/stats'
 
 export default function AboutPage() {
 
@@ -86,12 +49,9 @@ export default function AboutPage() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1>We&apos;re changing the way people connect.</h1>
+                  <h1>Elevating Your Digital Presence</h1>
                   <p>
-                    Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et
-                    labore commodo nulla aliqua proident mollit ullamco exercitation tempor. Sint aliqua anim nulla sunt
-                    mollit id pariatur in voluptate cillum. Eu voluptate tempor esse minim amet fugiat veniam occaecat
-                    aliqua.
+                    In an era where digital presence is not just an option but a necessity, we stand at the forefront of innovation and design, dedicated to transforming your ideas into reality. As a seasoned freelancer specializing in mobile app design, I bring a blend of creativity, technical prowess, and a user-centric approach to every project. My mission is to deliver sleek, functional mobile apps that not only meet but exceed your expectations, ensuring your business thrives in the digital landscape.
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -164,21 +124,11 @@ export default function AboutPage() {
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
                 <p>
-                  Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
-                  eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget.
-                  Eleifend egestas fringilla sapien.
+                  At the core of our work is a simple, yet powerful mission: to design mobile applications that empower businesses and delight users. We believe in creating digital experiences that are intuitive, engaging, and aesthetically pleasing, driving growth and innovation. 
                 </p>
                 <div className="mt-10 max-w-xl text-base leading-7">
                   <p>
-                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed
-                    amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius
-                    sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim.
-                    Mattis mauris semper sed amet vitae sed turpis id.
-                  </p>
-                  <p className="mt-10">
-                    Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                    auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et
-                    ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                  Through a collaborative process, we work closely with our clients, embracing challenges and celebrating the journey from concept to launch. Our commitment to excellence and passion for design fuels our quest to shape the future of mobile interactions.
                   </p>
                 </div>
               </div>
@@ -210,10 +160,9 @@ export default function AboutPage() {
         {/* Values section */}
         <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2>Our values</h2>
+            <h2>Our Guiding Principles</h2>
             <p>
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-              accusamus quisquam.
+              Our values are the driving force behind our work, shaping our approach to design and the relationships we build with our clients. We believe in creating a culture of excellence, innovation, and collaboration, ensuring every project is a success.
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
