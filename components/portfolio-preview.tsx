@@ -47,7 +47,7 @@ export default function PortfolioPreview() {
                         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-primary via-primary/40" />
                         <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-primary/10" />
                         <div className="absolute inset-0 flex items-end justify-center p-4 opacity-0 hover:opacity-100">
-                            <span className="text-white text-xl">{item.title}</span>
+                            <span className="text-primary-foreground text-xl">{item.title}</span>
                         </div>
                     </article>
                 </Link>

@@ -1,7 +1,7 @@
 import BlogPreview from "@/components/blog-preview";
 import Features from "@/components/features";
 import Hero from "@/components/hero";
-import ContactSection from "@/components/contact";
+import ContactSection from "@/components/cta-contact";
 import PortfolioPreview from "@/components/portfolio-preview";
 
 export default function Home() {

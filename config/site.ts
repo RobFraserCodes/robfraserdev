@@ -18,7 +18,7 @@ export const navigation = [
   { title: "About", href: "/about" },
   { title: "Blog", href: "/blog" },
   { title: "Services", href: "/services" },
-  { title: "Work", href: "/guides" },
+  { title: "My Work", href: "/guides" },
   { title: "Contact", href: "/contact" },
 ]
 
@@ -44,6 +44,11 @@ export const socialLinks = {
       name: 'LinkedIn',
       href: 'https://www.linkedin.com/in/robfrasercodes/',
       icon: Icons.linkedIn,
+    },
+    {
+      name: 'Medium',
+      href: 'https://robfraserdev.medium.com/',
+      icon: Icons.medium,
     }
   ],
 }

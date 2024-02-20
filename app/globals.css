@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
  
-    --primary: 240 5.9% 10%;
+    --primary: 235 30% 46%;
     --primary-foreground: 0 0% 98%;
  
     --secondary: 240 4.8% 95.9%;
@@ -45,8 +45,8 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
  
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 235 30% 46%;
+    --primary-foreground: 0 0% 98%;
  
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -77,16 +77,10 @@
     @apply text-4xl font-bold tracking-tight text-foreground sm:text-6xl;
   }
   h2 {
-    @apply text-3xl font-bold tracking-tight text-foreground sm:text-5xl uppercase;
+    @apply text-3xl font-bold tracking-tight text-foreground sm:text-4xl uppercase;
   }
   h3 {
-    @apply text-2xl font-bold tracking-tight text-foreground sm:text-4xl;
-  }
-  h4 {
-    @apply text-xl font-bold tracking-tight text-foreground sm:text-3xl;
-  }
-  h5 {
-    @apply text-lg font-bold tracking-tight text-foreground sm:text-2xl;
+    @apply mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl;
   }
   p {
     @apply text-lg text-muted-foreground mt-4 leading-8 lg:max-w-none;

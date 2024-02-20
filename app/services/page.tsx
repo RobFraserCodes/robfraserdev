@@ -1,12 +1,12 @@
 import { CheckIcon } from '@heroicons/react/24/outline'
 import { features } from 'content/data/features'
 import { tiers } from 'content/data/tiers'
-import ContactSection from '@/components/contact'
 import { cn } from '@/lib/utils'
 import FAQSection from '@/components/faq-section'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button'
+import ContactSection from '@/components/cta-contact'
 
 
 export default function ServicesPage() {

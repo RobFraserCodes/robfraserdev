@@ -3,6 +3,6 @@ interface ContactLayoutProps {
   }
   
   export default function ContactLayout({ children }: ContactLayoutProps) {
-    return <div className="mt-32 w-full">{children}</div>
+    return <div className="mt-28 w-full min-h-full">{children}</div>
   }
   
