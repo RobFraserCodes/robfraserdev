@@ -83,15 +83,16 @@ export default function Header() {
             <div className="mt-6">
               <ul className="py-8 space-y-4">
                 {navigation.map((item) => (
-                  <li key={item.title} className="p-2 hover:text-muted-foreground uppercase">
+                  <li key={item.title} className="uppercase">
                     <Link
                       href={item.href}
+                      className={buttonVariants({ variant: "ghost" })}
                     >
                       {item.title}
                     </Link>
                   </li>
                 ))}
-                <li className="py-2">
+                <li className="py-4 px-2 uppercase">
                   <Link
                     href="/login"
                     className={buttonVariants({ variant: "default" })}
