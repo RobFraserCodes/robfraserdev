@@ -44,7 +44,7 @@ export default function ContactSection() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
-                  <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                  <BuildingOffice2Icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                 </dt>
                 <dd>
                   Larch House
@@ -55,7 +55,7 @@ export default function ContactSection() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
-                  <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                  <PhoneIcon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                 </dt>
                 <dd>
                   <Link className="hover:text-foreground" href="tel:+44 (0) 77277 77494">
@@ -66,10 +66,10 @@ export default function ContactSection() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
-                  <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                  <EnvelopeIcon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <Link className="hover:text-white" href="mailto:hi@robfraser.dev">
+                  <Link className="hover:text-foreground" href="mailto:hi@robfraser.dev">
                     hi@robfraser.dev
                   </Link>
                 </dd>

@@ -52,59 +52,57 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
             <ThemeSwitch />
             <Link
-                href="#" 
-                className={buttonVariants({ variant: "ghost" })}>
+                href="/login" 
+                className={buttonVariants({ variant: "default" })}>
                 Log in <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </nav>
 
-<Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-  <div className="fixed inset-0 z-50" />
-  <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-    <div className="flex items-center justify-between">
-      <Link href="/" className="-m-1.5 p-1.5">
-        <span className="sr-only">Rob Fraser Dev</span>
-        <Image
-            width={64}
-            height={64}
-            src="/logo.svg"
-            alt="Rob Fraser Dev logo"
-        />
-      </Link>
-      <Button
-        type="button"
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        <span className="sr-only">Close menu</span>
-        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-      </Button>
-    </div>
-    <div className="mt-6">
-      <ul className="divide-y divide-foreground/5">
-        {navigation.map((item) => (
-          <li key={item.title} className="py-2">
-            <Link
-              href={item.href}
-              className={cn("text-sm font-semibold leading-6 block", 
-              textColorClass === "text-white" ? "text-white" : "text-foreground"
-            )}>
-              {item.title}
-            </Link>
-          </li>
-        ))}
-        <li className="py-2">
-          <Link
-            href="#"
-            className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-foreground hover:bg-gray-50"
-          >
-            Log in
-          </Link>
-        </li>
-      </ul>
-    </div>
-  </Dialog.Panel>
-</Dialog>
+        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+          <div className="fixed inset-0 z-50" />
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-foreground/10">
+            <div className="flex items-center justify-between">
+              <Link href="/" className="-m-1.5 p-1.5">
+                <span className="sr-only">Rob Fraser Dev</span>
+                <Image
+                    width={64}
+                    height={64}
+                    src="/logo.svg"
+                    alt="Rob Fraser Dev logo"
+                />
+              </Link>
+              <Button
+                type="button"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </Button>
+            </div>
+            <div className="mt-6">
+              <ul className="py-8 space-y-4">
+                {navigation.map((item) => (
+                  <li key={item.title} className="p-2 hover:text-muted-foreground uppercase">
+                    <Link
+                      href={item.href}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+                <li className="py-2">
+                  <Link
+                    href="/login"
+                    className={buttonVariants({ variant: "default" })}
+                  >
+                    Log in
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </Dialog.Panel>
+        </Dialog>
 
       </header>
   )
