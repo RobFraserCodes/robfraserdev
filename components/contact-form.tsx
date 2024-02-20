@@ -1,14 +1,14 @@
 'use client';
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
+import { toast, useToast } from "@/components/ui/use-toast"
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -40,21 +40,26 @@ export default function ContactForm() {
         },
     });
 
-    // const onSubmit = (data: FormValues) => {
-    //     console.log(data)
-    // }
+    const [successMessage, setSuccessMessage] = useState('');
 
     async function onSubmit(data: FormValues) {
         try {
-          await fetch('/api/contact', {
+          await fetch('/api/contact-form', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
           })
+          form.reset()
+          setSuccessMessage('Thank you for your message! It has been sent successfully.')
+          toast({
+            title: 'Message sent',
+            description: 'Thank you for your message! It has been sent successfully.',          
+          })
         } catch (error) {
-          console.error('An unexpected error happened:', error)
+          console.error('An unexpected error happened:', error);
+          setSuccessMessage('');
         }
       }
 
@@ -142,6 +147,7 @@ export default function ContactForm() {
                     Let&apos;s talk
                 </Button>
             </div>
+            {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}
             <p className="text-sm">By submitting this form, I agree to the{' '}
                 <Link href="/privacy-policy" className="font-semibold text-primary hover:text-primary/60">
                   privacy&nbsp;policy

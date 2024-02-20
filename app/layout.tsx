@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Inter as FontSans } from "next/font/google";
+import type { Metadata } from "next"
+import "./globals.css"
+import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/components/theme-provider";
-import { siteConfig } from "@/config/site";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider"
+import { siteConfig } from "@/config/site"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
+import { Toaster } from "@/components/ui/toaster"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>
