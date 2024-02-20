@@ -1,9 +1,9 @@
 import client from '@/postmark'
-import type { NextApiRequest } from 'next';
 
 export async function POST(request: Request) {
     const res = await request.json();
-
+    console.log(res);
+    
     client.sendEmail({
         "From": "hi@robfraser.dev",
         "To": "hi@robfraser.dev",

@@ -40,7 +40,7 @@ export default function ContactSection() {
 
             {/* Address */}
             <>
-            <div className="mt-8 space-y-4 text-base leading-7 text-muted-foreground">
+            <dl className="mt-8 space-y-4 text-base leading-7 text-muted-foreground">
               <div className="flex items-center gap-x-4"> {/* Add items-center here */}
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
@@ -74,7 +74,7 @@ export default function ContactSection() {
                   </Link>
                 </dd>
               </div>
-            </div>
+            </dl>
             </>
 
           </div>
