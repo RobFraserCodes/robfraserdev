@@ -40,8 +40,8 @@ export default function ContactSection() {
 
             {/* Address */}
             <>
-            <dl className="mt-10 space-y-4 text-base leading-7 text-muted-foreground">
-              <div className="flex gap-x-4">
+            <div className="mt-8 space-y-4 text-base leading-7 text-muted-foreground">
+              <div className="flex items-center gap-x-4"> {/* Add items-center here */}
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
                   <BuildingOffice2Icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
@@ -52,7 +52,7 @@ export default function ContactSection() {
                   Daviot, Inverness, IV2 5XQ
                 </dd>
               </div>
-              <div className="flex gap-x-4">
+              <div className="flex items-center gap-x-4"> {/* Add items-center here */}
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
                   <PhoneIcon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
@@ -63,18 +63,18 @@ export default function ContactSection() {
                   </Link>
                 </dd>
               </div>
-              <div className="flex gap-x-4">
+              <div className="flex items-center gap-x-4"> {/* Add items-center here */}
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
                   <EnvelopeIcon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <Link className="hover:text-foreground" href="mailto:hi@robfraser.dev">
+                  <Link className="hover:text-white" href="mailto:hi@robfraser.dev">
                     hi@robfraser.dev
                   </Link>
                 </dd>
               </div>
-            </dl>
+            </div>
             </>
 
           </div>
