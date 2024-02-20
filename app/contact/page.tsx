@@ -1,178 +1,227 @@
-import Image from "next/image";
+'use client'
+
+import React, { useState } from 'react'
+import Image from "next/image"
+import Link from 'next/link'
+import { EnvelopeIcon, PhoneIcon, BuildingOffice2Icon } from '@heroicons/react/20/solid'
+import { z } from "zod"
+import { toast } from "@/components/ui/use-toast"
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+  } from "@/components/ui/form"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+
+const formSchema = z.object({
+  firstName: z.string().min(2, { message: "First name must be at least 2 characters" }),
+  lastName: z.string().min(2, { message: "Last name must be at least 2 characters" }),
+  email: z.string().email({ message: "Invalid email address" }),
+  phone: z.string().optional(),
+  message: z.string().min(11),
+});
+
+type FormValues = z.infer<typeof formSchema>
 
 export default function ContactPage() {
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  async function onSubmit(data: FormValues) {
+    try {
+      await fetch('/api/contact-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      form.reset()
+      setSuccessMessage('Thank you for your message! It has been sent successfully.')
+      toast({
+        title: 'Message sent',
+        description: 'Thank you for your message! It has been sent successfully.',          
+      })
+    } catch (error) {
+      console.error('An unexpected error happened:', error)
+      toast({
+        title: 'An unexpected error happened',
+        description: 'Please try again later.',
+      })
+    }
+  }
 
   return (
       <main className="relative bg-background">
         <div className="lg:absolute lg:inset-0 lg:left-1/2">
           <Image
-            className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
+            className="h-64 w-full bg-background object-cover sm:h-80 lg:absolute lg:h-full"
             src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
             alt=""
             width={2560}
             height={3413}
           />
         </div>
+
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
           <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <h2>Let&apos;s work together</h2>
-              <p>
-                Proin volutpat consequat porttitor cras nullam gravida at orci molestie a eu arcu sed ut tincidunt magna.
-              </p>
-              <form action="#" method="POST" className="mt-16">
-                <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
-                      First name
-                    </label>
-                    <div className="mt-2.5">
-                      <input
-                        type="text"
-                        name="first-name"
-                        id="first-name"
-                        autoComplete="given-name"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            <h2>Get in touch</h2>
+            <p>
+              Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut tincidunt
+              integer elementum id sem. Arcu sed malesuada et magna.
+            </p>
+            <dl className="mt-10 space-y-4 text-base leading-7 text-muted-foreground">
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Address</span>
+                  <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                </dt>
+                <dd>
+                  Larch House
+                  <br />
+                  Daviot, Inverness, IV2 5XQ
+                </dd>
+              </div>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Telephone</span>
+                  <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                </dt>
+                <dd>
+                  <Link className="hover:text-foreground" href="tel:+44 (0) 77277 77494">
+                    +44 (0) 77277 77494
+                  </Link>
+                </dd>
+              </div>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Email</span>
+                  <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                </dt>
+                <dd>
+                  <Link className="hover:text-white" href="mailto:hi@robfraser.dev">
+                    hi@robfraser.dev
+                  </Link>
+                </dd>
+              </div>
+            </dl>
+
+              {/* Contact form */}
+              <>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="lg:flex-auto bg-background py-16">
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                      <FormField
+                        control={form.control}
+                        name="firstName"
+                        render={({ field, fieldState: { error } }) => (
+                          <FormItem>
+                            <FormLabel>First name</FormLabel>
+                            <FormControl>
+                              <Input {...field} />
+                            </FormControl>
+                            {error && <FormMessage>{error.message}</FormMessage>}
+                          </FormItem>
+                        )}
                       />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
-                      Last name
-                    </label>
-                    <div className="mt-2.5">
-                      <input
-                        type="text"
-                        name="last-name"
-                        id="last-name"
-                        autoComplete="family-name"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+
+                      <FormField
+                        control={form.control}
+                        name="lastName"
+                        render={({ field, fieldState: { error } }) => (
+                          <FormItem>
+                            <FormLabel>Last name</FormLabel>
+                            <FormControl>
+                              <Input {...field} />
+                            </FormControl>
+                            {error && <FormMessage>{error.message}</FormMessage>}
+                          </FormItem>
+                        )}
                       />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-                      Email
-                    </label>
-                    <div className="mt-2.5">
-                      <input
-                        id="email"
+
+                      <FormField
+                        control={form.control}
                         name="email"
-                        type="email"
-                        autoComplete="email"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        render={({ field, fieldState: { error } }) => (
+                          <FormItem
+                            className='col-span-2'
+                          >
+                            <FormLabel>Email</FormLabel>
+                            <FormControl>
+                              <Input {...field} />
+                            </FormControl>
+                            {error && <FormMessage>{error.message}</FormMessage>}
+                          </FormItem>
+                        )}
                       />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-                      Company
-                    </label>
-                    <div className="mt-2.5">
-                      <input
-                        type="text"
-                        name="company"
-                        id="company"
-                        autoComplete="organization"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <div className="flex justify-between text-sm leading-6">
-                      <label htmlFor="phone" className="block font-semibold text-gray-900">
-                        Phone
-                      </label>
-                      <p id="phone-description" className="text-gray-400">
-                        Optional
-                      </p>
-                    </div>
-                    <div className="mt-2.5">
-                      <input
-                        type="tel"
+
+                      <FormField
+                        control={form.control}
                         name="phone"
-                        id="phone"
-                        autoComplete="tel"
-                        aria-describedby="phone-description"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        render={({ field, fieldState: { error } }) => (
+                          <FormItem
+                            className='col-span-2'
+                          >
+                            <FormLabel>Phone</FormLabel>
+                            <FormControl>
+                              <Input {...field} />
+                            </FormControl>
+                            {error && <FormMessage>{error.message}</FormMessage>}
+                          </FormItem>
+                        )}
                       />
-                    </div>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <div className="flex justify-between text-sm leading-6">
-                      <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-                        How can we help you?
-                      </label>
-                      <p id="message-description" className="text-gray-400">
-                        Max 500 characters
-                      </p>
-                    </div>
-                    <div className="mt-2.5">
-                      <textarea
-                        id="message"
+
+                      <FormField
+                        control={form.control}
                         name="message"
-                        rows={4}
-                        aria-describedby="message-description"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        defaultValue={''}
+                        render={({ field, fieldState: { error } }) => (
+                          <FormItem
+                            className='col-span-2'
+                          >
+                            <FormLabel>Message</FormLabel>
+                            <FormControl>
+                              <Textarea {...field} />
+                            </FormControl>
+                            {error && <FormMessage>{error.message}</FormMessage>}
+                          </FormItem>
+                        )}
                       />
+
                     </div>
-                  </div>
-                  <fieldset className="sm:col-span-2">
-                    <legend className="block text-sm font-semibold leading-6 text-gray-900">Expected budget</legend>
-                    <div className="mt-4 space-y-4 text-sm leading-6 text-gray-600">
-                      <div className="flex gap-x-2.5">
-                        <input
-                          id="budget-under-25k"
-                          name="budget"
-                          defaultValue="under_25k"
-                          type="radio"
-                          className="mt-1 h-4 w-4 border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-600"
-                        />
-                        <label htmlFor="budget-under-25k">Less than $25K</label>
-                      </div>
-                      <div className="flex gap-x-2.5">
-                        <input
-                          id="budget-25k-50k"
-                          name="budget"
-                          defaultValue="25k-50k"
-                          type="radio"
-                          className="mt-1 h-4 w-4 border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-600"
-                        />
-                        <label htmlFor="budget-25k-50k">$25K – $50K</label>
-                      </div>
-                      <div className="flex gap-x-2.5">
-                        <input
-                          id="budget-50k-100k"
-                          name="budget"
-                          defaultValue="50k-100k"
-                          type="radio"
-                          className="mt-1 h-4 w-4 border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-600"
-                        />
-                        <label htmlFor="budget-50k-100k">$50K – $100K</label>
-                      </div>
-                      <div className="flex gap-x-2.5">
-                        <input
-                          id="budget-over-100k"
-                          name="budget"
-                          defaultValue="over_100k"
-                          type="radio"
-                          className="mt-1 h-4 w-4 border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-600"
-                        />
-                        <label htmlFor="budget-over-100k">$100K+</label>
-                      </div>
+                    <div className="mt-8 w-full">
+                      <Button 
+                        type="submit"
+                      >
+                        Submit
+                      </Button>
                     </div>
-                  </fieldset>
-                </div>
-                <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
-                  <button
-                    type="submit"
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    Send message
-                  </button>
-                </div>
-              </form>
+                    {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}
+                    <p className="text-sm">By submitting this form, I agree to the{' '}
+                        <Link href="/privacy-policy" className="font-semibold text-primary hover:text-primary/60">
+                          privacy&nbsp;policy
+                        </Link>.
+                    </p>
+                  </form>
+                </Form>
+              </>
             </div>
           </div>
         </div>

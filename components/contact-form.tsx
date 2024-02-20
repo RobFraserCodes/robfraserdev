@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React, { useState } from 'react'
 import Link from 'next/link'
@@ -129,7 +129,9 @@ export default function ContactForm() {
               control={form.control}
               name="message"
               render={({ field, fieldState: { error } }) => (
-                <FormItem>
+                <FormItem
+                  className='col-span-2'
+                >
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea {...field} className='col-span-2'/>

@@ -1,5 +1,6 @@
 import ContactForm from "./contact-form"
-import Image from "next/image"
+import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid"
+import Link from "next/link"
 
 export default function ContactSection() {
     return (
@@ -37,37 +38,45 @@ export default function ContactSection() {
             {/* Contact form */}
             <ContactForm />
 
-            {/* Testimonial */}
-            <div className="lg:mt-6 lg:w-80 lg:flex-none">
-              <Image 
-                className="h-12 w-auto" 
-                src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" 
-                alt=""
-                width={200}
-                height={50} 
-              />
-              <figure className="mt-10">
-                <blockquote className="text-lg font-semibold leading-8 text-muted-foreground">
-                  <p>
-                    “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-                    molestiae. Numquam corrupti in laborum sed rerum et corporis.”
-                  </p>
-                </blockquote>
-                <figcaption className="mt-10 flex gap-x-6">
-                  <Image
-                    src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
-                    alt=""
-                    className="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    width={96}
-                    height={96}
-                  />
-                  <div>
-                    <div className="text-base font-semibold text-foreground">Brenna Goyette</div>
-                    <div className="text-sm leading-6 text-muted-foreground">CEO of Workcation</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </div>
+            {/* Address */}
+            <>
+            <dl className="mt-10 space-y-4 text-base leading-7 text-muted-foreground">
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Address</span>
+                  <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                </dt>
+                <dd>
+                  Larch House
+                  <br />
+                  Daviot, Inverness, IV2 5XQ
+                </dd>
+              </div>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Telephone</span>
+                  <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                </dt>
+                <dd>
+                  <Link className="hover:text-foreground" href="tel:+44 (0) 77277 77494">
+                    +44 (0) 77277 77494
+                  </Link>
+                </dd>
+              </div>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Email</span>
+                  <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                </dt>
+                <dd>
+                  <Link className="hover:text-white" href="mailto:hi@robfraser.dev">
+                    hi@robfraser.dev
+                  </Link>
+                </dd>
+              </div>
+            </dl>
+            </>
+
           </div>
         </div>
       </div>
