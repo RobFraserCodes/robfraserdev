@@ -48,7 +48,7 @@ export default function Hero() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1>Empower Your Digital Presence Through Design</h1>
+                  <h1>Your Digital Presence Through Design</h1>
                   <p>
                     Welcome to Rob Fraser Dev, where I transform your vision into engaging mobile experiences that captivate your audience. With a passion for design and innovation, we&apos;re not just developing apps; we&apos;re crafting the future of mobile interaction. Let&apos;s turn your ideas into reality and make your app the next big thing. Start your journey with us today!
                   </p>

@@ -25,11 +25,13 @@ export default function PortfolioPreview() {
 
     return (
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <h3 className="text-center">My Portfolio</h3>
         <div className="-my-4 flex justify-center gap-5 py-4 sm:gap-8">
           {portfolio.map((item) => {
             const { className: rotationClass } = getRandomRotation();
             
             return (
+              <div>
                 <Link href={item.slug} key={item._id}>
                     <article
                         className={cn(
@@ -51,6 +53,7 @@ export default function PortfolioPreview() {
                         </div>
                     </article>
                 </Link>
+              </div>
             );
           })}
         </div>

@@ -51,7 +51,7 @@ export default function AboutPage() {
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1>Elevating Your Digital Presence</h1>
                   <p>
-                    In an era where digital presence is not just an option but a necessity, we stand at the forefront of innovation and design, dedicated to transforming your ideas into reality. As a seasoned freelancer specializing in mobile app design, I bring a blend of creativity, technical prowess, and a user-centric approach to every project. My mission is to deliver sleek, functional mobile apps that not only meet but exceed your expectations, ensuring your business thrives in the digital landscape.
+                    In an era where digital presence is not just an option but a necessity, we stand at the forefront of innovation and design, dedicated to transforming your ideas into reality. As a seasoned freelancer specialising in mobile app design, I bring a blend of creativity, technical prowess, and a user-centric approach to every project. My mission is to deliver sleek, functional mobile apps that not only meet but exceed your expectations, ensuring your business thrives in the digital landscape.
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">

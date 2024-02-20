@@ -91,6 +91,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
 
   return (
     <main className="container max-w-7xl relative py-32">
+      <h1 className="py-8">{guide.title}</h1>
       <div className="w-full relative h-[500px]">
         <Image
           src={guide.image}

@@ -39,21 +39,18 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-                  Announcing our next round of funding.{' '}
-                  <a href="#" className="font-semibold text-white">
+                <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-muted-foreground ring-1 ring-white/10 hover:ring-white/20">
+                  Check out our portfolio of work.{' '}
+                  <Link href="/guides" className="font-semibold text-white">
                     <span className="absolute inset-0" aria-hidden="true" />
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </a>
+                    View Portfolio <span aria-hidden="true">&rarr;</span>
+                  </Link>
                 </div>
               </div>
               <div className="text-center">
-                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                  Deploy to the cloud with confidence
-                </h1>
-                <p className="mt-6 text-lg leading-8 text-gray-300">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat aliqua.
+                <h1 className="text-white">Custom Mobile App Design</h1>
+                <p className="text-gray-300">
+                  Transform your ideas into stunning, functional mobile apps that captivate your audience. Our custom design process ensures your app is not only visually appealing but also user-friendly, providing an exceptional user experience.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <Link href="/contact"
@@ -61,7 +58,9 @@ export default function ServicesPage() {
                   >
                     Contact Us
                   </Link>
-                  <Link href="/guides">
+                  <Link href="/guides"
+                    className="text-white hover:text-muted-foreground"
+                  >
                     View My Portfolio <span aria-hidden="true">→</span>
                   </Link>
                 </div>
@@ -125,11 +124,10 @@ export default function ServicesPage() {
         <div className="mt-32 sm:mt-56">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
-              <h2 className="text-base font-semibold leading-7 text-primary">Everything you need</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">No server? No problem.</p>
+              <h2 className="text-base font-semibold leading-7 text-primary">UI/UX Design Consultation</h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Responsive Web Design</p>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste dolor cupiditate blanditiis.
+                Elevate your mobile app with our expert UI/UX consultation services. We focus on creating intuitive, engaging user experiences that drive user satisfaction and retention.
               </p>
             </div>
           </div>

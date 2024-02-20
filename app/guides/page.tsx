@@ -7,7 +7,7 @@ import { formatDate } from "@/lib/utils"
 export const metadata = {
   title: "Portfolio",
   description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+    "My portfolio of guides, tutorials, and articles on web development and design.",
 }
 
 export default function PortfolioPage() {
