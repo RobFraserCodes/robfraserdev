@@ -25,7 +25,17 @@ export default function PortfolioPreview() {
 
     return (
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h3 className="text-center">My Portfolio</h3>
+        <h2 className="text-base text-primary text-center">My Portfolio</h2>
+        <h3 className="text-center">View My Work</h3>
+        <p className="text-center">
+          Here are a few examples of my work. Want to see more?{" "}
+          <Link 
+            href="/guides"
+            className="text-primary hover:text-primary/80 transition-colors duration-200 ease-in-out"
+          > 
+            View my portfolio
+          </Link>
+        </p>
         <div className="-my-4 flex justify-center gap-5 py-4 sm:gap-8">
           {portfolio.map((item) => {
             const { className: rotationClass } = getRandomRotation();

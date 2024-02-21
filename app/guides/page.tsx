@@ -60,7 +60,7 @@ export default function PortfolioPage() {
           ))}
         </div>
       ) : (
-        <p>No guides published.</p>
+        <p>No portfolio published.</p>
       )}
     </div>
   )

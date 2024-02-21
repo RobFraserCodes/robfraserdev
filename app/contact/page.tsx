@@ -85,8 +85,7 @@ export default function ContactPage() {
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2>Get in touch</h2>
             <p>
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut tincidunt
-              integer elementum id sem. Arcu sed malesuada et magna.
+              If you have any questions or would like to discuss a project, please get in touch. I would love to hear from you.
             </p>
 
             <div className="mt-8 space-y-4 text-base leading-7 text-muted-foreground">

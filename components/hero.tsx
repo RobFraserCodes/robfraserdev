@@ -48,20 +48,20 @@ export default function Hero() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1>Your Digital Presence Through Design</h1>
+                  <h1>Software Developer & Designer</h1>
                   <p>
-                    Welcome to Rob Fraser Dev, where I transform your vision into engaging mobile experiences that captivate your audience. With a passion for design and innovation, we&apos;re not just developing apps; we&apos;re crafting the future of mobile interaction. Let&apos;s turn your ideas into reality and make your app the next big thing. Start your journey with us today!
+                    Welcome to Rob Fraser Dev, I am a software developer and designer based in the UK. I create websites and web applications for businesses and individuals. I also write about web development and design. I am passionate about creating beautiful, functional and accessible websites and web applications. I am currently available for freelance work. If you would like to work with me, please get in touch. I would love to hear from you.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link
                       href="/guides"
                       className={buttonVariants({ variant: "default" })}>
-                        My Work
+                        My Portfolio
                     </Link>
                     <Link
                       href="/contact"
                       className={buttonVariants({ variant: "ghost" })}>
-                        Contact Me&nbsp;<span aria-hidden="true">→</span>
+                        Get in touch&nbsp;<span aria-hidden="true">→</span>
                     </Link>
                   </div>
                 </div>
