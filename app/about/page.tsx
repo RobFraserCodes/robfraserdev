@@ -8,7 +8,7 @@ export default function AboutPage() {
       <main className="isolate">
         
         {/* Hero section */}
-        <div className="relative isolate -z-10">
+        <div className="relative isolate -z-10 mt-24">
           <svg
             className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-foreground/20 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
             aria-hidden="true"
