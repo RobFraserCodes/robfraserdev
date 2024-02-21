@@ -1,6 +1,9 @@
+'use client'
+
 import BlogPreview from '@/components/blog-preview'
 import Image from 'next/image'
 import { stats, values } from '@/content/data/stats'
+import { TypeAnimation } from 'react-type-animation'
 
 export default function AboutPage() {
 
@@ -44,7 +47,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 
-                {/* Hero Image */}
+                {/* Coding Image */}
                 <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
                   <div className="shadow-lg md:rounded-3xl">
                     <div className="bg-indigo-500 [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
@@ -63,7 +66,24 @@ export default function AboutPage() {
                                 <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
                               </div>
                             </div>
-                            <div className="px-6 pb-14 pt-6">{/* Your code example */}</div>
+                            <div className="px-6 pb-14 pt-6">
+                              <TypeAnimation
+                                sequence={
+                                  [
+                                    "Welcome to the future of mobile design",
+                                    2000,
+                                    "import React from 'react'",
+                                    2000,
+                                    "import { App } from './App'",
+                                    2000,
+                                  ]
+                                }
+                                repeat={Infinity}
+                                className="text-white"
+                                speed={50}
+                                deletionSpeed={50}
+                                />
+                            </div>
                           </div>
                         </div>
                         <div
