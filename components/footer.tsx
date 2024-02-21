@@ -1,6 +1,5 @@
 import { navigation } from "@/config/site"
-import { socialLinks } from "@/config/site"
-import Link from "next/link"
+import SocialIcons from "./social-icon"
   
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -17,15 +16,10 @@ export default function Footer() {
             </div>
           ))}
         </nav>
-        <div className="mt-10 flex justify-center space-x-10">
-          {socialLinks.social.map((item) => (
-            <Link key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-              <span className="sr-only">{item.name}</span>
-              {item.icon ? <item.icon className="h-6 w-6" /> : item.name}
-            </Link>
-          ))}
+        <div className="mt-10 flex justify-center">
+          <SocialIcons />
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+        <p className="mt-10 text-center text-xs leading-5 text-muted-foreground">
           &copy; {year} Rob Fraser Development. All rights reserved.
         </p>
       </div>
