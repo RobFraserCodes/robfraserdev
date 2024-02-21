@@ -19,6 +19,7 @@ import {
   } from "@/components/ui/form"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
+import SocialIcons from '@/components/social-icon'
 
 const formSchema = z.object({
   firstName: z.string().min(2, { message: "First name must be at least 2 characters" }),
@@ -87,6 +88,7 @@ export default function ContactPage() {
             <p>
               If you have any questions or would like to discuss a project, please get in touch. I would love to hear from you.
             </p>
+            <SocialIcons className='mt-8'/>
 
             <div className="mt-8 space-y-4 text-base leading-7 text-muted-foreground">
               <div className="flex items-center gap-x-4"> {/* Add items-center here */}

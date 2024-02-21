@@ -4,11 +4,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils";
 
-type RotationOption = {
-    className: string;
-    degrees: number;
-  };
-
 const rotationOptions = [
     { className: "rotate-1", degrees: -30 },
     { className: "rotate-2", degrees: -15 },
@@ -43,7 +38,7 @@ export default function PortfolioPreview() {
             href="/guides"
             className="text-primary hover:text-primary/80 transition-colors duration-200 ease-in-out"
           > 
-            View my portfolio
+            View entire portfolio
           </Link>
         </p>
         <div className="-my-4 flex justify-center gap-5 py-4 sm:gap-8">
