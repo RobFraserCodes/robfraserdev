@@ -41,7 +41,6 @@ export default function PortfolioPreview() {
             const { className: rotationClass } = getRandomRotation();
             
             return (
-              <div>
                 <Link href={item.slug} key={item._id}>
                     <article
                         className={cn(
@@ -63,7 +62,6 @@ export default function PortfolioPreview() {
                         </div>
                     </article>
                 </Link>
-              </div>
             );
           })}
         </div>
