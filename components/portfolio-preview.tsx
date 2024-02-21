@@ -4,13 +4,19 @@ import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils";
 
+type RotationOption = {
+    className: string;
+    degrees: number;
+  };
+
 const rotationOptions = [
     { className: "rotate-1", degrees: -30 },
     { className: "rotate-2", degrees: -15 },
     { className: "rotate-3", degrees: 15 },
     { className: "rotate-4", degrees: 30 },
   ];
-  
+
+let lastRotationIndex = -1; 
 
 export default function PortfolioPreview() {
     const portfolio = allGuides
@@ -19,7 +25,11 @@ export default function PortfolioPreview() {
       .slice(0, 5);
 
       const getRandomRotation = () => {
-        const randomIndex = Math.floor(Math.random() * rotationOptions.length);
+        let randomIndex;
+        do {
+          randomIndex = Math.floor(Math.random() * rotationOptions.length);
+        } while (randomIndex === lastRotationIndex);
+        lastRotationIndex = randomIndex;
         return rotationOptions[randomIndex];
       };
 
