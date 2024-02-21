@@ -5,7 +5,7 @@ const features = [
   {
     name: 'UX Design',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Using the latest design tools, I can help you create a user experience that is intuitive and easy to use. I have experience with a variety of design tools and techniques.',
     icon: CloudArrowUpIcon,
   },
   {

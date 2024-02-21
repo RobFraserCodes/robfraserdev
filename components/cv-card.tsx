@@ -16,27 +16,27 @@ import SocialIcons from "./social-icon"
 
 const workExperience = [
   {
-    title: "Frontend Developer",
-    company: "Company Name",
-    date: "Jan 2020 - Present",
+    title: "Fullstack Developer",
+    company: "RobFraser Dev",
+    date: "Sept 2021 - Present",
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80",
   },
   {
-    title: "Frontend Developer",
-    company: "Company Name",
-    date: "Jan 2020 - Present",
+    title: "Liaison Manager",
+    company: "Scottish Qualifications Authority",
+    date: "April 2013 - Present",
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80",
   },
   {
-    title: "Frontend Developer",
-    company: "Company Name",
-    date: "Jan 2020 - Present",
+    title: "Quality Assurance Officer",
+    company: "Inverness College UHI",
+    date: "2006 - 2013",
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80",
   },
   {
-    title: "Frontend Developer",
-    company: "Company Name",
-    date: "Jan 2020 - Present",
+    title: "Software Development BSc",
+    company: "University of the Highlands and Islands",
+    date: "2006 - 2010",
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80",
   },
 ]
@@ -73,10 +73,14 @@ export function CVCard({ className, ...props }: CVCardProps) {
               <p className="text-muted-foreground text-sm">{item.date}</p>
             </div>
           </div>
-        ))}
+        ))} 
       </CardContent>
-      <CardFooter>
-        <Link href="/rob-fraser-cv.pdf" className={buttonVariants({ variant: "default" })}>
+      <CardFooter className="py-4">
+        <Link 
+          target="_blank"
+          href="/rob-fraser-cv.pdf" 
+          className={buttonVariants({ variant: "default" })}
+        >
           <ArrowDownIcon className="mr-2 h-4 w-4" />
           Download CV
         </Link>

@@ -5,11 +5,10 @@ export default function Features() {
     <div className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base text-primary">Why Choose Rob Fraser?</h2>
-          <h3>Unleashing the Power of Exceptional App Design</h3>
+          <h2 className="text-base text-primary">Software Design & Developer</h2>
+          <h3>Bespoke solutions for your business</h3>
           <p>
-            Our team of expert designers and developers are dedicated to creating the best user experience for your
-            app. We are committed to providing the highest quality of service and support to our clients.
+            I create websites and web applications for businesses and individuals. I also write about web development and design. I am passionate about creating beautiful, functional and accessible websites and web applications. I am currently available for freelance work.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
