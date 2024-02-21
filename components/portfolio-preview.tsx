@@ -29,7 +29,7 @@ export default function PortfolioPreview() {
       };
 
     return (
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-32">
         <h2 className="text-base text-primary text-center">My Portfolio</h2>
         <h3 className="text-center">View My Work</h3>
         <p className="text-center">

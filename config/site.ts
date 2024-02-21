@@ -4,7 +4,7 @@ import { Icons } from "@/components/icons"
 export const siteConfig: SiteConfig = {
   name: "Rob Fraser Dev",
   description:
-    "An open source application built using the new router, server components and everything new in Next.js 13.",
+    "Freelance web developer and designer based in the UK. Specialising in building fast, accessible and responsive websites.",
   url: "https://www.robfraser.dev",
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {
@@ -17,7 +17,7 @@ export const navigation = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Blog", href: "/blog" },
-  { title: "Services", href: "/services" },
+  { title: "Education", href: "/education" },
   { title: "My Work", href: "/guides" },
   { title: "Contact", href: "/contact" },
 ]
