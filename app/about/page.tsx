@@ -1,6 +1,9 @@
+'use client'
+
 import BlogPreview from '@/components/blog-preview'
 import Image from 'next/image'
 import { stats, values } from '@/content/data/stats'
+import { TypeAnimation } from 'react-type-animation'
 
 export default function AboutPage() {
 
@@ -8,31 +11,7 @@ export default function AboutPage() {
       <main className="isolate">
         
         {/* Hero section */}
-        <div className="relative isolate -z-10 mt-24">
-          <svg
-            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-foreground/20 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
-                width={200}
-                height={200}
-                x="50%"
-                y={-1}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y={-1} className="overflow-visible fill-foreground/20">
-              <path
-                d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
-            <rect width="100%" height="100%" strokeWidth={0} fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
-          </svg>
+        <div className="relative isolate -z-10 mt-16">
 
           <div className="overflow-hidden">
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
@@ -44,12 +23,12 @@ export default function AboutPage() {
                   </p>
                 </div>
                 
-                {/* Hero Image */}
+                {/* Coding Image */}
                 <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
                   <div className="shadow-lg md:rounded-3xl">
-                    <div className="bg-indigo-500 [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
+                    <div className="bg-primary [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
                       <div
-                        className="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
+                        className="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-primary-foreground opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
                         aria-hidden="true"
                       />
                       <div className="relative px-6 pt-8 sm:pt-16 md:pl-16 md:pr-0">
@@ -63,7 +42,24 @@ export default function AboutPage() {
                                 <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
                               </div>
                             </div>
-                            <div className="px-6 pb-14 pt-6">{/* Your code example */}</div>
+                            <div className="px-6 pb-14 pt-6">
+                              <TypeAnimation
+                                sequence={
+                                  [
+                                    "Welcome to the future of mobile design",
+                                    2000,
+                                    "import React from 'react'",
+                                    2000,
+                                    "import { App } from './App'",
+                                    2000,
+                                  ]
+                                }
+                                repeat={Infinity}
+                                className="text-white"
+                                speed={50}
+                                deletionSpeed={50}
+                                />
+                            </div>
                           </div>
                         </div>
                         <div
