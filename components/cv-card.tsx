@@ -48,10 +48,9 @@ export function CVCard({ className, ...props }: CVCardProps) {
     <Card className={cn("w-[380px]", className)} {...props}>
       <CardHeader>
         <CardTitle>Work Experience</CardTitle>
-        <CardDescription className="flex items-center">View my work experience.</CardDescription>
+        <CardDescription className="flex">View my work experience.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <SocialIcons />
         {workExperience.map((item, index) => (
           <div key={index} className="flex justify-between py-2 align-center">
             <div className="flex items-center space-x-4">
@@ -67,9 +66,10 @@ export function CVCard({ className, ...props }: CVCardProps) {
               <p className="text-muted-foreground text-sm">{item.date}</p>
             </div>
           </div>
-        ))} 
+        ))}
+        <SocialIcons className="mt-8 justify-center"/>
       </CardContent>
-      <CardFooter className="py-4">
+      <CardFooter className="py-4 justify-center">
         <Link 
           target="_blank"
           href="/rob-fraser-cv.pdf" 
