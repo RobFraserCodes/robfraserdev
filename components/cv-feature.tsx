@@ -1,4 +1,4 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { AcademicCapIcon, CloudArrowUpIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { CVCard } from './cv-card'
 
 const features = [
@@ -13,7 +13,13 @@ const features = [
     description:
       "Using the latest technologies, I can help you build a website that is fast, secure, and easy to use. I'm experienced with a variety of frameworks and languages.",
     icon: ServerIcon,
-  }
+  },
+  {
+    name: 'Education',
+    description:
+      "I am passionate about education and have experience teaching a variety of subjects. I have a degree in Software Development and have worked in education for almost 20 years.",
+    icon: AcademicCapIcon,
+  },
 ]
 
 export default function CVFeature() {

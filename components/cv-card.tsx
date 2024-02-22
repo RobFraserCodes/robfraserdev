@@ -1,4 +1,4 @@
-import { ArrowDownCircleIcon, CommandLineIcon, UserGroupIcon, AcademicCapIcon, DocumentChartBarIcon } from "@heroicons/react/20/solid"
+import { ArrowDownCircleIcon, CommandLineIcon, UserGroupIcon, AcademicCapIcon, DocumentChartBarIcon, LightBulbIcon } from "@heroicons/react/20/solid"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import {
@@ -30,6 +30,12 @@ const workExperience = [
     company: "Inverness College UHI",
     date: "2006 - 2013",
     icon: <DocumentChartBarIcon className="h-6 w-6 text-primary-foreground m-2" />,
+  },
+  {
+    title: "CoderDojo Champion",
+    company: "CoderDojo",
+    date: "2013 - 2016",
+    icon: <LightBulbIcon className="h-6 w-6 text-primary-foreground m-2" />,
   },
   {
     title: "Software Development BSc",
