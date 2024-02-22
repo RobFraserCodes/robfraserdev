@@ -53,11 +53,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4 items-center">
             <ThemeSwitch />
             <SignedOut>
-              <SignInButton>
-                <Button>
-                  Log in
-                </Button>
-              </SignInButton>
+              <SignInButton />
             </SignedOut>
             <UserButton />
           </div>
