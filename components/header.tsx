@@ -10,7 +10,7 @@ import { Button, buttonVariants } from './ui/button';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { ThemeSwitch } from './theme-switch-button';
-import { UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -50,8 +50,11 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4 items-center">
             <ThemeSwitch />
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
             <UserButton />
           </div>
         </nav>
