@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
@@ -10,7 +10,7 @@ import { Button, buttonVariants } from './ui/button';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { ThemeSwitch } from './theme-switch-button';
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -22,12 +22,12 @@ export default function Header() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Rob Fraser Dev</span>
+              <span className="sr-only">MatchDay</span>
               <Image
-                width={64}
-                height={64}
-                src="/logo.svg"
-                alt="Rob Fraser Dev logo"
+                width={80}
+                height={80}
+                src="/logo.png"
+                alt="MatchDay logo"
               />
             </Link>
           </div>

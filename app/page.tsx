@@ -9,11 +9,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <CVFeature />
-      <PortfolioPreview />
-      <Features />
-      <BlogPreview />
-      <ContactSection />
     </main>
   );
 }

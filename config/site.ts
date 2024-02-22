@@ -2,9 +2,8 @@ import { SiteConfig, NavItem } from "@/types"
 import { Icons } from "@/components/icons"
 
 export const siteConfig: SiteConfig = {
-  name: "Rob Fraser Dev",
-  description:
-    "Freelance web developer and designer based in the UK. Specialising in building fast, accessible and responsive websites.",
+  name: "MatchDay",
+  description: "Predict and win with MatchDay, a football prediction game based on the uniqueness of the SPFL.",
   url: "https://www.robfraser.dev",
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {
@@ -14,11 +13,9 @@ export const siteConfig: SiteConfig = {
 }
 
 export const navigation = [
-  { title: "Home", href: "/" },
+  { title: "Play", href: "/play" },
   { title: "About", href: "/about" },
-  { title: "Blog", href: "/blog" },
-  { title: "Education", href: "/education" },
-  { title: "My Work", href: "/guides" },
+  { title: "News", href: "/blog" },
   { title: "Contact", href: "/contact" },
 ]
 
