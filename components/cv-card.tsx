@@ -79,7 +79,7 @@ export function CVCard({ className, ...props }: CVCardProps) {
         <Link 
           target="_blank"
           href="/rob-fraser-cv.pdf" 
-          className={buttonVariants({ variant: "default" })}
+          className={cn(buttonVariants({ variant: "default" }), "w-full py-2")}
         >
           <ArrowDownCircleIcon className="mr-2 h-4 w-4" />
           Download CV
