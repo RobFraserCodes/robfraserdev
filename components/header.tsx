@@ -10,11 +10,12 @@ import { Button, buttonVariants } from './ui/button';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import { ThemeSwitch } from './theme-switch-button';
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const textColorClass = pathname === "/services" ? "text-white" : "text-foreground";
+  const textColorClass = pathname === "/education" ? "text-white" : "text-foreground";
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -49,13 +50,12 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4 items-center">
             <ThemeSwitch />
-            <Link
-                href="/login" 
-                className={buttonVariants({ variant: "default" })}>
-                Log in <span aria-hidden="true">&rarr;</span>
-            </Link>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <UserButton />
           </div>
         </nav>
 
