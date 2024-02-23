@@ -48,15 +48,15 @@ export default function ServicesPage() {
                 </div>
               </div>
               <div className="text-center">
-                <h1 className="text-white">Custom Mobile App Design</h1>
+                <h1 className="text-white">Teaching Modern Skills</h1>
                 <p className="text-gray-300">
-                  Transform your ideas into stunning, functional mobile apps that captivate your audience. Our custom design process ensures your app is not only visually appealing but also user-friendly, providing an exceptional user experience.
+                  Having worked in education for almost 20 years, I have a wealth of experience in teaching and learning. I have taught in a variety of settings including primary and secondary schools, colleges and universities. I have been a Coderdojo champion and STEM Ambassador with experience of teaching students with a range of abilities and needs. I have a passion for education and I am committed to helping students to achieve their full potential.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <Link href="/contact"
                     className={buttonVariants({ variant: "default"})}
                   >
-                    Contact Us
+                    Contact Me
                   </Link>
                   <Link href="/guides"
                     className="text-white hover:text-muted-foreground"
@@ -68,7 +68,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Logo cloud */}
-            <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            {/* <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
               <Image
                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                 src="https://tailwindui.com/Image/logos/158x48/transistor-logo-white.svg"
@@ -104,7 +104,8 @@ export default function ServicesPage() {
                 width={158}
                 height={48}
               />
-            </div>
+            </div> */}
+
           </div>
           <div
             className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -121,7 +122,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Feature section */}
-        <div className="mt-32 sm:mt-56">
+        {/* <div className="mt-32 sm:mt-56">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
               <h2 className="text-base font-semibold leading-7 text-primary">UI/UX Design Consultation</h2>
@@ -158,10 +159,10 @@ export default function ServicesPage() {
               ))}
             </dl>
           </div>
-        </div>
+        </div> */}
 
         {/* Testimonial section */}
-        <div className="relative z-10 mt-32 bg-background pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
+        {/* <div className="relative z-10 mt-32 bg-background pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
           <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
             <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
               <div
@@ -213,10 +214,10 @@ export default function ServicesPage() {
               </figure>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Pricing section */}
-        <div className="relative isolate mt-32 bg-background px-6 sm:mt-56 lg:px-8">
+        {/* <div className="relative isolate mt-32 bg-background px-6 sm:mt-56 lg:px-8">
           <div
             className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
             aria-hidden="true"
@@ -315,7 +316,7 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* FAQ section */}
         <FAQSection />
