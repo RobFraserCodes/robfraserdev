@@ -33,6 +33,7 @@ type FormValues = z.infer<typeof formSchema>
 
 export default function ContactPage() {
   const [successMessage, setSuccessMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -46,6 +47,7 @@ export default function ContactPage() {
   });
 
   async function onSubmit(data: FormValues) {
+    setIsSubmitting(true);
     try {
       await fetch('/api/contact-form', {
         method: 'POST',
@@ -60,12 +62,14 @@ export default function ContactPage() {
         title: 'Message sent',
         description: 'Thank you for your message! It has been sent successfully.',          
       })
+      setIsSubmitting(false);
     } catch (error) {
       console.error('An unexpected error happened:', error)
       toast({
         title: 'An unexpected error happened',
         description: 'Please try again later.',
       })
+      setIsSubmitting(false);
     }
   }
 
@@ -211,8 +215,15 @@ export default function ContactPage() {
                     <div className="mt-8 w-full">
                       <Button 
                         type="submit"
+                        className='w-full'
                       >
-                        Submit
+                      {isSubmitting ? (
+                              <div className="flex items-center justify-center">
+                              <div className="spinner-border animate-spin inline-block w-4 h-4 border-2 rounded-full" role="status">
+                                  <span className="visually-hidden">Loading...</span>
+                              </div>
+                          </div>
+                      ) : "Submit"}
                       </Button>
                     </div>
                     {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}

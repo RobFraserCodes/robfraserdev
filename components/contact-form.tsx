@@ -41,8 +41,10 @@ export default function ContactForm() {
     });
 
     const [successMessage, setSuccessMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     async function onSubmit(data: FormValues) {
+        setIsSubmitting(true);
         try {
           await fetch('/api/contact-form', {
             method: 'POST',
@@ -57,9 +59,11 @@ export default function ContactForm() {
             title: 'Message sent',
             description: 'Thank you for your message! It has been sent successfully.',          
           })
+          setIsSubmitting(false);
         } catch (error) {
           console.error('An unexpected error happened:', error);
           setSuccessMessage('');
+          setIsSubmitting(false);
         }
       }
 
@@ -145,8 +149,15 @@ export default function ContactForm() {
                 <Button 
                     className='w-full'
                     type="submit"
+                    disabled={isSubmitting}
                 >
-                    Let&apos;s talk
+                {isSubmitting ? (
+                        <div className="flex items-center justify-center">
+                        <div className="spinner-border animate-spin inline-block w-4 h-4 border-2 rounded-full" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                ) : "Submit"}
                 </Button>
             </div>
             {successMessage && <p className="mt-4 text-green-600">{successMessage}</p>}

@@ -4,7 +4,7 @@ import { Icons } from "@/components/icons"
 export const siteConfig: SiteConfig = {
   name: "Rob Fraser Dev",
   description:
-    "Freelance web developer and designer based in the UK. Specialising in building fast, accessible and responsive websites.",
+    "Freelance web developer and designer based in the UK. Specialising in building fast, accessible and responsive software applications.",
   url: "https://www.robfraser.dev",
   ogImage: "https://tx.shadcn.com/og.jpg",
   links: {
