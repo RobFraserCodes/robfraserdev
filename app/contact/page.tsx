@@ -220,7 +220,7 @@ export default function ContactPage() {
                       {isSubmitting ? (
                               <div className="flex items-center justify-center">
                               <div className="spinner-border animate-spin inline-block w-4 h-4 border-2 rounded-full" role="status">
-                                  <span className="visually-hidden">Loading...</span>
+                                  <span className="sr-only">Loading...</span>
                               </div>
                           </div>
                       ) : "Submit"}
