@@ -17,7 +17,7 @@ export default function PortfolioPreview() {
     const portfolio = allGuides
       .filter((portfolio) => portfolio.published)
       .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
-      .slice(0, 5);
+      .slice(0, 3);
 
       const getRandomRotation = () => {
         let randomIndex;
@@ -41,15 +41,15 @@ export default function PortfolioPreview() {
             View entire portfolio
           </Link>
         </p>
-        <div className="-my-4 flex justify-center gap-5 py-4 sm:gap-8">
+        <div className="my-16 flex flex-col items-center justify-center gap-5 py-4 sm:gap-8 lg:flex-row">
           {portfolio.map((item) => {
             const { className: rotationClass } = getRandomRotation();
             
             return (
-                <Link href={item.slug} key={item._id}>
+                <Link href={item.slug} key={item._id} className="flex flex-col">
                     <article
                         className={cn(
-                        "my-24 relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 pb-8 pt-80 sm:pt-48 lg:pt-80 px-40 object-cover group-hover:scale-110 transition-transform duration-300 ease-in-out",
+                        "flex items-center justify-center relative rounded-2xl overflow-hidden w-80 h-80",
                         rotationClass
                         )}
                     >
