@@ -2,18 +2,19 @@
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
+import { Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { navigation } from '@/config/site';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Button, buttonVariants } from './ui/button';
-import { cn } from '@/lib/utils';
-import { usePathname } from 'next/navigation';
-import { ThemeSwitch } from './theme-switch-button';
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { navigation } from '@/config/site'
+import Link from 'next/link'
+import Image from 'next/image'
+import { Button, buttonVariants } from './ui/button'
+import { cn } from '@/lib/utils'
+import { usePathname } from 'next/navigation'
+import { ThemeSwitch } from './theme-switch-button'
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  let [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const textColorClass = pathname === "/education" ? "text-white" : "text-foreground";
 
@@ -61,7 +62,7 @@ export default function Header() {
           </div>
         </nav>
 
-        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-foreground/10">
             <div className="flex items-center justify-between">
@@ -82,6 +83,17 @@ export default function Header() {
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </Button>
             </div>
+            <Transition
+              show={mobileMenuOpen}
+              as="div"
+              className="mt-6"
+              enter="transition-opacity duration-75 ease-in-out"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="transition-opacity duration-75 ease-in-out"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
             <div className="mt-6">
               <ul className="py-8 space-y-4">
                 {navigation.map((item) => (
@@ -89,6 +101,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       className={buttonVariants({ variant: "ghost" })}
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.title}
                     </Link>
@@ -104,6 +117,7 @@ export default function Header() {
                 </li>
               </ul>
             </div>
+            </Transition>
           </Dialog.Panel>
         </Dialog>
 

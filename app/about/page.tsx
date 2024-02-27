@@ -4,6 +4,7 @@ import BlogPreview from '@/components/blog-preview'
 import Image from 'next/image'
 import { stats, values } from '@/content/data/stats'
 import { TypeAnimation } from 'react-type-animation'
+import ContactSection from '@/components/cta-contact'
 
 export default function AboutPage() {
 
@@ -202,6 +203,9 @@ export default function AboutPage() {
 
         {/* Blog section */}
         <BlogPreview />
+
+        {/* Contact Form */}
+        <ContactSection />
 
       </main>
   )
