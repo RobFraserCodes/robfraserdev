@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <Hero />
       <CVFeature />
-      <PortfolioPreview />
+      {/* <PortfolioPreview /> */}
       <Features />
       <BlogPreview />
       <ContactSection />
