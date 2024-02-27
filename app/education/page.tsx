@@ -319,7 +319,7 @@ export default function ServicesPage() {
         </div> */}
 
         {/* FAQ section */}
-        <FAQSection />
+        {/* <FAQSection /> */}
 
         {/* Contact Section */}
         <ContactSection />
