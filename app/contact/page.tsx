@@ -90,7 +90,7 @@ export default function ContactPage() {
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2>Get Your Free Business Consultation</h2>
             <p>
-              Ready to grow your business? Let's discuss your project and I'll provide a detailed analysis of how custom web solutions can transform your business. <strong>No obligation, just valuable insights.</strong>
+              Ready to grow your business? Let&apos;s discuss your project and I&apos;ll provide a detailed analysis of how custom web solutions can transform your business. <strong>No obligation, just valuable insights.</strong>
             </p>
             <SocialIcons className='mt-8'/>
 

@@ -46,7 +46,7 @@ export default function Hero() {
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1>Transform Your Business with Custom Web & Mobile Solutions</h1>
                   <p className="text-lg leading-8 text-muted-foreground">
-                    I'm Rob Fraser, a UK-based freelance developer specializing in <strong>custom web applications</strong> and <strong>mobile app design</strong>. I help businesses grow through fast, user-friendly digital solutions that convert visitors into customers.
+                    I&apos;m Rob Fraser, a UK-based freelance developer specializing in <strong>custom web applications</strong> and <strong>mobile app design</strong>. I help businesses grow through fast, user-friendly digital solutions that convert visitors into customers.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link

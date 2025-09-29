@@ -32,7 +32,7 @@ export default function ContactSection() {
         <div className="mx-auto max-w-xl lg:max-w-4xl">
           <h2>Ready to Transform Your Business?</h2>
           <p>
-            Get a <strong>free consultation</strong> and discover how custom web applications can help your business grow. I'll analyze your current setup and provide actionable recommendations.
+            Get a <strong>free consultation</strong> and discover how custom web applications can help your business grow. I&apos;ll analyze your current setup and provide actionable recommendations.
           </p>
           <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
             {/* Contact form */}
