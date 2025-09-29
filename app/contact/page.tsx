@@ -95,38 +95,38 @@ export default function ContactPage() {
             <SocialIcons className='mt-8'/>
 
             <div className="mt-8 space-y-4 text-base leading-7 text-muted-foreground">
-              <div className="flex items-center gap-x-4"> {/* Add items-center here */}
-                <dt className="flex-none">
+              <div className="flex items-center gap-x-4">
+                <div className="flex-none">
                   <span className="sr-only">Address</span>
                   <BuildingOffice2Icon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
-                </dt>
-                <dd>
+                </div>
+                <div>
                   Larch House
                   <br />
                   Daviot, Inverness, IV2 5XQ
-                </dd>
+                </div>
               </div>
-              <div className="flex items-center gap-x-4"> {/* Add items-center here */}
-                <dt className="flex-none">
+              <div className="flex items-center gap-x-4">
+                <div className="flex-none">
                   <span className="sr-only">Telephone</span>
                   <PhoneIcon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
-                </dt>
-                <dd>
+                </div>
+                <div>
                   <Link className="hover:text-foreground" href="tel:+44 (0) 77277 77494">
                     +44 (0) 77277 77494
                   </Link>
-                </dd>
+                </div>
               </div>
-              <div className="flex items-center gap-x-4"> {/* Add items-center here */}
-                <dt className="flex-none">
+              <div className="flex items-center gap-x-4">
+                <div className="flex-none">
                   <span className="sr-only">Email</span>
                   <EnvelopeIcon className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
-                </dt>
-                <dd>
+                </div>
+                <div>
                   <Link className="hover:text-white" href="mailto:hi@robfraser.dev">
                     hi@robfraser.dev
                   </Link>
-                </dd>
+                </div>
               </div>
             </div>
 
