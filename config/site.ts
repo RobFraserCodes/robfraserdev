@@ -2,11 +2,11 @@ import { SiteConfig, NavItem } from "@/types"
 import { Icons } from "@/components/icons"
 
 export const siteConfig: SiteConfig = {
-  name: "Rob Fraser Dev",
+  name: "Rob Fraser Dev - Custom Web & Mobile Development",
   description:
-    "Freelance web developer and designer based in the UK. Specialising in building fast, accessible and responsive software applications.",
+    "UK freelance developer specializing in custom web applications and mobile app design. Help your business grow with fast, user-friendly digital solutions. Free consultation available.",
   url: "https://www.robfraser.dev",
-  ogImage: "https://tx.shadcn.com/og.jpg",
+  ogImage: "https://www.robfraser.dev/og-image.jpg",
   links: {
     twitter: "https://twitter.com/robfrasercodes",
     github: "https://github.com/robfrasercodes",

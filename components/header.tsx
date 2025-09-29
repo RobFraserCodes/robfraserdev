@@ -50,7 +50,7 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4 items-center">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-4 items-center relative">
             <ThemeSwitch />
           </div>
         </nav>

@@ -30,9 +30,9 @@ export default function ContactSection() {
           <rect width="100%" height="100%" strokeWidth={0} fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
         </svg>
         <div className="mx-auto max-w-xl lg:max-w-4xl">
-          <h2>Let&apos;s talk about your project</h2>
+          <h2>Ready to Transform Your Business?</h2>
           <p>
-            We help companies and individuals build out their brand guidelines.
+            Get a <strong>free consultation</strong> and discover how custom web applications can help your business grow. I'll analyze your current setup and provide actionable recommendations.
           </p>
           <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
             {/* Contact form */}

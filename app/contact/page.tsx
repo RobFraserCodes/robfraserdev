@@ -88,9 +88,9 @@ export default function ContactPage() {
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
           <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2>Get in touch</h2>
+            <h2>Get Your Free Business Consultation</h2>
             <p>
-              If you have any questions or would like to discuss a project, please get in touch. I would love to hear from you.
+              Ready to grow your business? Let's discuss your project and I'll provide a detailed analysis of how custom web solutions can transform your business. <strong>No obligation, just valuable insights.</strong>
             </p>
             <SocialIcons className='mt-8'/>
 

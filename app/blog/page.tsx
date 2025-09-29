@@ -14,9 +14,9 @@ export default function BlogPage() {
         <div className="bg-background py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-            <h2>From the blog</h2>
+            <h2>Web Development & Business Growth Insights</h2>
             <p className="mt-2 text-lg leading-8 text-muted-foreground">
-                Learn how to grow your business with our expert advice.
+                Expert advice on web development, SEO, mobile-first design, and growing your business online. Learn from real-world experience and industry best practices.
             </p>
             </div>
             <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">

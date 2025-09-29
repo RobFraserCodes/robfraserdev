@@ -48,21 +48,31 @@ export default function Hero() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1>Software Developer & Designer</h1>
-                  <p>
-                    Welcome to Rob Fraser Dev, I am a software developer and designer based in the UK. I create websites and web applications for businesses and individuals. I also write about web development and design. I am passionate about creating beautiful, functional and accessible websites and web applications. I am currently available for freelance work. If you would like to work with me, please get in touch. I would love to hear from you.
+                  <h1>Transform Your Business with Custom Web & Mobile Solutions</h1>
+                  <p className="text-lg leading-8 text-muted-foreground">
+                    I'm Rob Fraser, a UK-based freelance developer specializing in <strong>custom web applications</strong> and <strong>mobile app design</strong>. I help businesses grow through fast, user-friendly digital solutions that convert visitors into customers.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link
-                      href="/guides"
+                      href="/contact"
                       className={buttonVariants({ variant: "default" })}>
-                        My Portfolio
+                        Get Your Free Consultation
                     </Link>
                     <Link
-                      href="/contact"
+                      href="/guides"
                       className={buttonVariants({ variant: "ghost" })}>
-                        Get in touch&nbsp;<span aria-hidden="true">→</span>
+                        View My Work&nbsp;<span aria-hidden="true">→</span>
                     </Link>
+                  </div>
+                  <div className="mt-8 flex items-center gap-x-8 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-x-2">
+                      <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                      <span>Available for new projects</span>
+                    </div>
+                    <div className="flex items-center gap-x-2">
+                      <div className="h-2 w-2 rounded-full bg-blue-500"></div>
+                      <span>2-4 week delivery</span>
+                    </div>
                   </div>
                 </div>
                 
