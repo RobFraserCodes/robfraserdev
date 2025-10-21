@@ -90,7 +90,7 @@ export default function HighlandsLandingPage() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
-                  Get a modern website live in 10 days — built locally in the Highlands.
+                  Get a modern website live in 10 days, built locally in the Highlands.
                 </h1>
 
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
@@ -116,11 +116,12 @@ export default function HighlandsLandingPage() {
               <div className="relative h-[400px] lg:h-[600px]">
                 {/* Placeholder for Highland hero image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center">
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Add Highland landscape image here
-                    <br />
-                    <span className="text-sm">/public/highlands/hero.jpg</span>
-                  </p>
+                  <Image
+                    src="/highlands/hero.jpg"
+                    alt="Highland landscape"
+                    fill
+                    className="object-cover rounded-2xl -z-10"
+                  />
                 </div>
               </div>
             </div>
@@ -179,7 +180,7 @@ export default function HighlandsLandingPage() {
             </div>
 
             <p className="text-center text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-              I help Highland businesses look professional online, fast — so you can focus on running the business.
+              I help Highland businesses look professional online, fast so you can focus on running the business.
             </p>
           </div>
         </section>
@@ -296,7 +297,7 @@ export default function HighlandsLandingPage() {
         <section id="portfolio" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-              Recent Work for Scottish Businesses
+              Recent Work for Highland Businesses
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -304,17 +305,17 @@ export default function HighlandsLandingPage() {
                 {
                   title: 'Café in Inverness',
                   description: 'One-page site with menu & hours.',
-                  link: '#'
+                  link: '/examples/cafe-inverness'
                 },
                 {
                   title: 'Highland Tour Company',
                   description: 'Bookings + itinerary highlights.',
-                  link: '#'
+                  link: 'https://kilt-and-castle-git-main-robfraserdev-team.vercel.app/'
                 },
                 {
                   title: 'Local Tradesman',
                   description: 'Services + quick quote form.',
-                  link: '#'
+                  link: '/examples/highland-plumbing'
                 }
               ].map((project, index) => (
                 <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
@@ -398,7 +399,7 @@ export default function HighlandsLandingPage() {
         {/* Final CTA Section */}
         <section className="py-20 bg-primary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">
               Your customers are searching. Let&apos;s make sure they find you.
             </h2>
 
@@ -416,37 +417,6 @@ export default function HighlandsLandingPage() {
           </div>
         </section>
 
-        {/* Footer Mini */}
-        <footer className="py-12 bg-gray-50 dark:bg-slate-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="text-center md:text-left">
-                <p className="text-gray-600 dark:text-gray-400 mb-2">
-                  Rob Fraser Dev — Web Design for Highland Businesses
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-500">
-                  Based in Inverness, Scotland
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-6 items-center">
-                <a href="mailto:hello@robfraser.dev" className="text-gray-600 dark:text-gray-400 hover:text-primary">
-                  hello@robfraser.dev
-                </a>
-                <Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-primary">
-                  Contact
-                </Link>
-                <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-primary">
-                  Main Site
-                </Link>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500 dark:text-gray-500">
-              © {new Date().getFullYear()} Rob Fraser Dev. All rights reserved.
-            </div>
-          </div>
-        </footer>
       </main>
     </>
   )

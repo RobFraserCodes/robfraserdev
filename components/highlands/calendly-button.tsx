@@ -55,7 +55,7 @@ export function CalendlyButton({
         <div className="w-full h-[600px]">
           {/* Calendly inline widget embed */}
           <iframe
-            src="https://calendly.com/your-calendly-username/15min"
+            src="https://calendly.com/hi-robfraser/30min"
             width="100%"
             height="100%"
             frameBorder="0"
