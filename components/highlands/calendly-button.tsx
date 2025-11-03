@@ -1,7 +1,5 @@
 "use client"
 
-import { useState } from 'react'
-import { Dialog } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 
 interface CalendlyButtonProps {
@@ -11,22 +9,41 @@ interface CalendlyButtonProps {
   children: React.ReactNode
 }
 
+// Replace this URL with your Google Calendar appointment scheduling link
+// To get your link: Google Calendar > Settings > Appointments > Create appointment schedule
+// Then copy the "Booking page" URL
+const GOOGLE_CALENDAR_BOOKING_URL = 'https://calendar.app.google/R1jBh1jUaLD1e8Qo6'
+
+/*
+  SUGGESTED SERVICE DESCRIPTION FOR GOOGLE CALENDAR:
+  
+  Free 15-Minute Website Audit
+  
+  Let's discuss your current website and explore how a modern, mobile-ready site could help your Highland business. 
+  
+  In this quick 15-minute call, I'll:
+  - Review your current online presence
+  - Identify quick wins to improve your site
+  - Explain my £499 fixed-price website package (delivered in 7-10 days)
+  - Answer any questions about getting your business online
+  
+  No obligation — just honest advice and a clear plan if we're a good fit.
+  
+  Based in Inverness, serving Highland businesses across Scotland.
+*/
+
 export function CalendlyButton({
   variant = 'default',
   size = 'default',
   className = '',
   children
 }: CalendlyButtonProps) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const handleOpenModal = () => {
-    setIsOpen(true)
-
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // Track with Google Analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'lead', {
         event_category: 'engagement',
-        event_label: 'calendly_modal_opened'
+        event_label: 'google_calendar_booking_opened'
       })
     }
 
@@ -37,39 +54,20 @@ export function CalendlyButton({
   }
 
   return (
-    <>
-      <Button
-        onClick={handleOpenModal}
-        variant={variant}
-        size={size}
-        className={className}
+    <Button
+      variant={variant}
+      size={size}
+      className={className}
+      asChild
+    >
+      <a
+        href={GOOGLE_CALENDAR_BOOKING_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleLinkClick}
       >
         {children}
-      </Button>
-
-      <Dialog
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        maxWidth="4xl"
-      >
-        <div className="w-full h-[600px]">
-          {/* Calendly inline widget embed */}
-          <iframe
-            src="https://calendly.com/hi-robfraser/30min"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            title="Schedule a meeting"
-            className="rounded-lg"
-          />
-        </div>
-        <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-          Can&apos;t find a good time? Email me at{' '}
-          <a href="mailto:hello@robfraser.dev" className="text-primary hover:underline">
-            hello@robfraser.dev
-          </a>
-        </p>
-      </Dialog>
-    </>
+      </a>
+    </Button>
   )
 }

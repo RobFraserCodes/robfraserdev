@@ -49,11 +49,13 @@ export default function Hero() {
                     I&apos;m Rob Fraser, a UK-based freelance developer specializing in <strong>custom web applications</strong> and <strong>mobile app design</strong>. I help businesses grow through fast, user-friendly digital solutions that convert visitors into customers.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
-                    <Link
-                      href="/contact"
+                    <a
+                      href="https://calendar.app.google/R1jBh1jUaLD1e8Qo6"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={buttonVariants({ variant: "default" })}>
                         Get Your Free Consultation
-                    </Link>
+                    </a>
                     <Link
                       href="/guides"
                       className={buttonVariants({ variant: "ghost" })}>
