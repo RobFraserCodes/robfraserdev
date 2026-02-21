@@ -9,33 +9,33 @@ import {
 
 export const features = [
     {
-      name: 'Business-Focused Development',
-      description: 'Every solution is designed to help your business grow. We focus on conversion optimization, user experience, and business growth, not just pretty designs.',
+      name: 'Custom Website Development',
+      description: 'Marketing websites and landing pages designed to communicate your offer clearly and turn visitors into enquiries.',
       icon: CloudArrowUpIcon,
     },
     {
-      name: 'Fast Loading & Mobile-First',
-      description: 'Your website loads in under 2 seconds and converts 3x better on mobile. We build for speed, accessibility, and user engagement that drives sales.',
+      name: 'Web App Development',
+      description: 'Tailored web applications for bookings, operations, internal tools, and customer portals using modern, scalable architecture.',
       icon: LockClosedIcon,
     },
     {
-      name: 'Modern Tech Stack',
-      description: 'Built with React, Next.js, and cutting-edge technologies. Your website will be fast, secure, and scalable for years to come.',
+      name: 'Mobile App UX & UI Design',
+      description: 'Product design for mobile-first experiences, from user journeys and wireframes to polished interface systems and prototypes.',
       icon: ArrowPathIcon,
     },
     {
-      name: 'Free Consultation & Strategy',
-      description: 'Get a detailed analysis of your current setup and actionable recommendations. No obligation, just valuable insights to grow your business.',
+      name: 'Product & Technical Strategy',
+      description: 'Clarity before build: scope definition, feature prioritisation, and practical roadmaps so you invest in the right work first.',
       icon: FingerPrintIcon,
     },
     {
-      name: 'Proven Results',
-      description: "My clients see measurable business growth. I don't just build websites - I build business growth engines that convert visitors into customers.",
+      name: 'Performance & SEO Foundations',
+      description: 'Fast loading, accessibility, and SEO-ready structure baked in from day one to improve discoverability and user experience.',
       icon: Cog6ToothIcon,
     },
     {
-      name: 'Ongoing Support & Maintenance',
-      description: 'Your success is my success. I provide ongoing support, updates, and optimization to ensure your website continues to grow your business.',
+      name: 'Ongoing Support',
+      description: 'Post-launch support, iterative improvements, and maintenance so your product keeps performing as your business grows.',
       icon: ServerIcon,
     },
 ]

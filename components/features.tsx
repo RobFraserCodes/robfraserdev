@@ -5,10 +5,10 @@ export default function Features() {
     <div className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base text-primary">Software Design & Developer</h2>
-          <h3>Bespoke solutions for your business</h3>
+          <h2 className="text-base text-primary">Services</h2>
+          <h3>How I can help your business grow</h3>
           <p>
-            I create websites and web applications for businesses and individuals. I also write about web development and design. I am passionate about creating beautiful, functional and accessible websites and web applications. I am currently available for freelance work.
+            I work with founders, teams, and businesses that need practical digital products with measurable impact. Whether you need a new product, a redesign, or support improving what you already have, I can help from strategy through delivery.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

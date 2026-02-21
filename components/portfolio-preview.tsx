@@ -2,76 +2,61 @@ import { allGuides } from "@/.contentlayer/generated"
 import { compareDesc } from "date-fns"
 import Link from "next/link"
 import Image from "next/image"
-import { cn } from "@/lib/utils";
+import { buttonVariants } from "./ui/button";
 
-const rotationOptions = [
-    { className: "rotate-1", degrees: -30 },
-    { className: "rotate-2", degrees: -15 },
-    { className: "rotate-3", degrees: 15 },
-    { className: "rotate-4", degrees: 30 },
-  ];
-
-let lastRotationIndex = -1; 
+const projectOutcomes: Record<string, string> = {
+  "Instagrub Mobile App Design": "Improved checkout flow and increased daily active users through clearer mobile UX.",
+  "Moodiv8 Mobile App Design": "Created a social experience focused on wellbeing with stronger engagement patterns.",
+  "MatchDay Mobile App Design": "Designed an interactive matchday experience with a clear, fan-first mobile journey.",
+};
 
 export default function PortfolioPreview() {
-    const portfolio = allGuides
-      .filter((portfolio) => portfolio.published)
-      .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
-      .slice(0, 3);
+  const portfolio = allGuides
+    .filter((portfolio) => portfolio.published)
+    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
+    .slice(0, 3);
 
-      const getRandomRotation = () => {
-        let randomIndex;
-        do {
-          randomIndex = Math.floor(Math.random() * rotationOptions.length);
-        } while (randomIndex === lastRotationIndex);
-        lastRotationIndex = randomIndex;
-        return rotationOptions[randomIndex];
-      };
-
-    return (
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-32">
-        <h2 className="text-base text-primary text-center">My Portfolio</h2>
-        <h3 className="text-center">View My Work</h3>
-        <p className="text-center">
-          Here are a few examples of my work. Want to see more?{" "}
-          <Link 
-            href="/guides"
-            className="text-primary hover:text-primary/80 transition-colors duration-200 ease-in-out"
-          > 
-            View entire portfolio
-          </Link>
-        </p>
-        <div className="my-16 flex flex-col items-center justify-center gap-5 py-4 sm:gap-8 lg:flex-row">
-          {portfolio.map((item) => {
-            const { className: rotationClass } = getRandomRotation();
-            
-            return (
-                <Link href={item.slug} key={item._id} className="flex flex-col">
-                    <article
-                        className={cn(
-                        "flex items-center justify-center relative rounded-2xl overflow-hidden w-80 h-80",
-                        rotationClass
-                        )}
-                    >
-                        <Image
-                            src={item.image}
-                            alt={item.title}
-                            className="absolute inset-0 -z-10 h-full w-full object-cover"
-                            width={500}
-                            height={500}
-                        />
-                        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-primary via-primary/40" />
-                        <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-primary/10" />
-                        <div className="absolute inset-0 flex items-end justify-center p-4 opacity-0 hover:opacity-100">
-                            <span className="text-primary-foreground text-xl">{item.title}</span>
-                        </div>
-                    </article>
-                </Link>
-            );
-          })}
-        </div>
+  return (
+    <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+      <h2 className="text-center text-base text-primary">Selected Projects</h2>
+      <h3 className="text-center">Built work, not just ideas</h3>
+      <p className="text-center">
+        A sample of product and design projects already delivered. Each case study shows
+        the problem, approach, and final outcome.
+      </p>
+      <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        {portfolio.map((item) => (
+          <article
+            key={item._id}
+            className="group overflow-hidden rounded-2xl border bg-background shadow-sm transition-shadow hover:shadow-lg"
+          >
+            <div className="relative h-52 w-full overflow-hidden">
+              <Image
+                src={item.image}
+                alt={item.title}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                width={600}
+                height={420}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+            </div>
+            <div className="space-y-4 p-6">
+              <h4 className="text-xl font-semibold text-foreground">{item.title}</h4>
+              <p className="text-base leading-7 text-muted-foreground">
+                {projectOutcomes[item.title] ?? item.description}
+              </p>
+              <Link href={item.slug} className={buttonVariants({ variant: "outline" })}>
+                View Case Study
+              </Link>
+            </div>
+          </article>
+        ))}
       </div>
-    );
+      <div className="mt-10 flex justify-center">
+        <Link href="/guides" className={buttonVariants({ variant: "default" })}>
+          View Full Portfolio
+        </Link>
+      </div>
+    </div>
+  );
 }
-
-  
